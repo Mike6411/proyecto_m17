@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Blaster_Script : MonoBehaviour
+public class Blaster_Movement : MonoBehaviour
 {
     public float speed;
     public float jump;
