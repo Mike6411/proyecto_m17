@@ -2,25 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rocket_Script : MonoBehaviour
+public class Test : MonoBehaviour
 {
-
-    public float explosionStrength = 100;
-    public Rigidbody2D rb;
-
-    public GameObject explosion;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public float power = 100;
+    public float radius = 2;
 
     void AddExplosionForce(Rigidbody2D rb, float explosionForce, Vector2 explosionPosition, float explosionRadius, float upwardsModifier = 0.0F, ForceMode2D mode = ForceMode2D.Force)
     {
@@ -41,9 +26,9 @@ public class Rocket_Script : MonoBehaviour
         rb.AddForce(Mathf.Lerp(0, explosionForce, (1 - explosionDistance)) * explosionDir, mode);
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        GameObject newBoom = Instantiate(explosion, transform.position, transform.rotation);
-        Destroy(gameObject);
+        AddExplosionForce(collision.otherRigidbody, power, this.transform.position, radius);
+        Destroy(gameObject, 1);
     }
 }
