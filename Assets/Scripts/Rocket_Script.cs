@@ -5,7 +5,6 @@ using UnityEngine;
 public class Rocket_Script : MonoBehaviour
 {
 
-    public float explosionStrength;
     public Rigidbody2D rb;
     public GameObject explosion;
 

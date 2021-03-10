@@ -9,7 +9,9 @@ public class Blaster_Movement : MonoBehaviour
     public float jump;
     public Rigidbody2D rb;
     public GameObject rocket;
+    public GameObject C4;
     public float rocketSpeed;
+    public float C4Speed;
     public enum Weapons { NONE, WPN1, WPN2, WPN3, WPN4};
     public Weapons currentWeapon;
 
@@ -41,15 +43,16 @@ public class Blaster_Movement : MonoBehaviour
         {
             currentWeapon = Weapons.WPN4;
         }
+        if (Input.GetKey(KeyCode.Alpha0))
+        {
+            currentWeapon = Weapons.NONE;
+        }
 
         //Jumping
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (grounded)
             {
-                /*
-                rb.velocity = new Vector2(rb.velocity.x, jump);
-                */
                 rb.AddForce(transform.up * jump, ForceMode2D.Impulse);
             }
         }
@@ -76,6 +79,11 @@ public class Blaster_Movement : MonoBehaviour
                 GameObject newRocket = Instantiate(rocket, transform.position + transform.right, transform.rotation);
                 newRocket.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.right * rocketSpeed);
             }
+            if (currentWeapon == Weapons.WPN2)
+            {
+                GameObject newRocket = Instantiate(C4, transform.position + transform.right, transform.rotation);
+                newRocket.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.right * C4Speed);
+            }
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
@@ -83,6 +91,11 @@ public class Blaster_Movement : MonoBehaviour
             {
                 GameObject newRocket = Instantiate(rocket, transform.position - transform.right, transform.rotation);
                 newRocket.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.left * rocketSpeed);
+            }
+            if (currentWeapon == Weapons.WPN2)
+            {
+                GameObject newRocket = Instantiate(C4, transform.position + transform.right, transform.rotation);
+                newRocket.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.left * C4Speed);
             }
         }
     }
