@@ -19,7 +19,6 @@ public class Blaster_Movement : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         currentWeapon = Weapons.NONE;
     }
 
@@ -48,7 +47,10 @@ public class Blaster_Movement : MonoBehaviour
         {
             if (grounded)
             {
+                /*
                 rb.velocity = new Vector2(rb.velocity.x, jump);
+                */
+                rb.AddForce(transform.up * jump, ForceMode2D.Impulse);
             }
         }
 

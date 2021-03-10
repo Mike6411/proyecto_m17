@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    public float power = 100;
-    public float radius = 2;
+    public float power;
+    public float radius;
+    public float timer;
 
     void AddExplosionForce(Rigidbody2D rb, float explosionForce, Vector2 explosionPosition, float explosionRadius, float upwardsModifier = 0.0F, ForceMode2D mode = ForceMode2D.Force)
     {
@@ -26,9 +27,9 @@ public class Test : MonoBehaviour
         rb.AddForce(Mathf.Lerp(0, explosionForce, (1 - explosionDistance)) * explosionDir, mode);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        AddExplosionForce(collision.otherRigidbody, power, this.transform.position, radius);
-        Destroy(gameObject, 1);
+        AddExplosionForce(collision.otherRigidbody, power, transform.position, radius);
+        Destroy(gameObject);
     }
 }
