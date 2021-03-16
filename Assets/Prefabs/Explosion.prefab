@@ -93,5 +93,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 500
-  radius: 3
+  radius: 4
   timer: 5

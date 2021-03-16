@@ -14,9 +14,6 @@ public class Rocket_Script : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-
-
-
     void OnCollisionEnter2D(Collision2D other)
     {
         GameObject newBoom = Instantiate(explosion, transform.position, transform.rotation);
