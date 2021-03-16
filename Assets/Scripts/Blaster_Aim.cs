@@ -4,36 +4,85 @@ using UnityEngine;
 
 public class Blaster_Aim : MonoBehaviour
 {
-    private Transform aimTransform;
+    public int maxAngle = 360;
+    public GameObject jugador;
+    public GameObject rocket;
+    public GameObject C4;
+    public GameObject grenade;
+    public float rocketSpeed;
+    public float C4Speed;
+    public float GrenadeSpeed;
+    public enum Weapons { NONE, WPN1, WPN2, WPN3, WPN4 };
+    public Weapons currentWeapon;
 
-    public Vector3 GetMouseWorldPosition()
+    void Start()
     {
-        Vector3 vec = GetMouseWorldPositionWithZ(Input.mousePosition, Camera.main);
-        vec.z = 0f;
-        return vec;
+        currentWeapon = Weapons.NONE;
+       
     }
 
-    public Vector3 GetMouseWorldPositionWithZ(Vector3 screenPosition, Camera worldCamera)
+    void Update()
     {
-        Vector3 worldPosition = worldCamera.ScreenToWorldPoint(screenPosition);
-        return worldPosition;
+        //Rotation Call
+        RotationWeapon(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+
+        //Weapon Select
+        if (Input.GetKey(KeyCode.Alpha1))
+        {
+            currentWeapon = Weapons.WPN1;
+        }
+        if (Input.GetKey(KeyCode.Alpha2))
+        {
+            currentWeapon = Weapons.WPN2;
+        }
+        if (Input.GetKey(KeyCode.Alpha3))
+        {
+            currentWeapon = Weapons.WPN3;
+        }
+        if (Input.GetKey(KeyCode.Alpha4))
+        {
+            currentWeapon = Weapons.WPN4;
+        }
+        if (Input.GetKey(KeyCode.Alpha0))
+        {
+            currentWeapon = Weapons.NONE;
+        }
+
+        //Weapon Use
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            if (currentWeapon == Weapons.WPN1)
+            {
+                GameObject newRocket = Instantiate(rocket, transform.position + transform.right, transform.rotation);
+                newRocket.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.right * rocketSpeed);
+            }
+            if (currentWeapon == Weapons.WPN2)
+            {
+                GameObject newC4 = Instantiate(C4, transform.position + transform.right, transform.rotation);
+                newC4.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.right * C4Speed);
+            }
+            if (currentWeapon == Weapons.WPN3)
+            {
+                GameObject newGrenade = Instantiate(grenade, transform.position + transform.right, transform.rotation);
+                newGrenade.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.right * GrenadeSpeed);
+            }
+        }
     }
 
-    private void Awake()
+    public void RotationWeapon(Vector3 mousePos)
     {
-        aimTransform = transform.Find("Aim");
+        Vector2 dir = mousePos - transform.position;
+        float rotationZ = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
+        if (rotationZ <= -maxAngle)
+        {
+            rotationZ = -maxAngle;
+        }
+        else if (rotationZ >= maxAngle)
+        {
+            rotationZ = maxAngle;
+        }
+
+        transform.localRotation = Quaternion.Euler(0, 0, rotationZ);
     }
-
-    private void Update()
-    {
-        Vector3 mousePosition =GetMouseWorldPosition();
-
-        Vector3 aimDirection = (mousePosition - transform.position).normalized;
-        float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
-        aimTransform.eulerAngles = new Vector3(0, 0, angle);
-        Debug.Log(angle);
-    }
-
-    
 }
