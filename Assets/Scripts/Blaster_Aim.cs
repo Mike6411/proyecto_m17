@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Blaster_Aim : MonoBehaviour
 {
-    public int maxAngle = 360;
+    public int maxAngle = 90;
     public GameObject jugador;
     public GameObject rocket;
     public GameObject C4;
@@ -12,13 +12,13 @@ public class Blaster_Aim : MonoBehaviour
     public float rocketSpeed;
     public float C4Speed;
     public float GrenadeSpeed;
+    public SpriteRenderer sr;
     public enum Weapons { NONE, WPN1, WPN2, WPN3, WPN4 };
     public Weapons currentWeapon;
 
     void Start()
     {
         currentWeapon = Weapons.NONE;
-       
     }
 
     void Update()
@@ -75,12 +75,17 @@ public class Blaster_Aim : MonoBehaviour
         float rotationZ = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
         if (rotationZ <= -maxAngle)
-        {
-            rotationZ = -maxAngle;
+        { 
+            sr.flipY = true;
         }
         else if (rotationZ >= maxAngle)
         {
-            rotationZ = maxAngle;
+            
+            sr.flipY = true;
+        }
+        else
+        {
+            sr.flipY = false;
         }
 
         transform.localRotation = Quaternion.Euler(0, 0, rotationZ);
