@@ -16,7 +16,7 @@ public class Rocket_Script : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        GameObject newBoom = Instantiate(explosion, transform.position, transform.rotation);
+        GameObject newBoom = Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

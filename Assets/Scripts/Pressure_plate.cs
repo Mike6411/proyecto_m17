@@ -13,7 +13,7 @@ public class Pressure_plate : MonoBehaviour
         //door.SetBool ("open", false);
     }
 
-    void Update(Collider other)
+    void Update()
     {
         //pressure_plate.SetBool ("ON", true);
         //door.SetBool ("open", true);

@@ -2174,14 +2174,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a5ef6a020c91642986567a4b4f62cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAngle: 360
-  jugador: {fileID: 0}
+  jugador: {fileID: 1271975409}
   rocket: {fileID: 1838453894341362275, guid: 3a4999d2459fe35488d869ff25a6234d, type: 3}
   C4: {fileID: 5542233496773227700, guid: 38442f0c336230b4c9dc891a40ff28ad, type: 3}
   grenade: {fileID: 6748066570978216180, guid: 33d19516d09cf45419a9679216bce0fe, type: 3}
   rocketSpeed: 1000
   C4Speed: 10
-  GrenadeSpeed: 200
+  GrenadeSpeed: 150
+  sr: {fileID: 1010714556}
   currentWeapon: 0
 --- !u!212 &1010714556
 SpriteRenderer:
@@ -2562,6 +2562,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c644e46d45d7b04fad7f14e1154713a, type: 3}
+--- !u!1 &1271975409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1604449002642468272, guid: 513e0741f00fe024db1e7718092db324,
+    type: 3}
+  m_PrefabInstance: {fileID: 1433550767}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1387456969
 GameObject:
   m_ObjectHideFlags: 0
@@ -2659,6 +2665,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mass
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604449002642468268, guid: 513e0741f00fe024db1e7718092db324,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1604449002642468269, guid: 513e0741f00fe024db1e7718092db324,
         type: 3}

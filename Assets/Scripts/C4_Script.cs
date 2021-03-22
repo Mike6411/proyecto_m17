@@ -17,7 +17,7 @@ public class C4_Script : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.K) && primed){
-            GameObject newBoom = Instantiate(explosion, transform.position, transform.rotation);
+            GameObject newBoom = Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

@@ -17,7 +17,7 @@ public class Grenade_Script : MonoBehaviour
 
     void DelayedExplosion ()
     {
-        GameObject newBoom = Instantiate(explosion, transform.position, transform.rotation);
+        GameObject newBoom = Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

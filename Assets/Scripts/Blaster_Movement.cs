@@ -39,13 +39,13 @@ public class Blaster_Movement : MonoBehaviour
         rb.velocity = new Vector2(moveVelocity, rb.velocity.y);
     }
     //Check if Grounded
-    void OnTriggerEnter2D()
+    /*void OnTriggerEnter2D()
     {
         grounded = true;
     }
     void OnTriggerExit2D()
     {
         grounded = false;
-    }
+    }*/
 
 }

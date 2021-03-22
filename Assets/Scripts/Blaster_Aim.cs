@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Blaster_Aim : MonoBehaviour
 {
-    public int maxAngle = 90;
+    private int maxAngle = 90;
     public GameObject jugador;
     public GameObject rocket;
     public GameObject C4;
