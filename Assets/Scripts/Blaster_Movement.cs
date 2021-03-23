@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Blaster_Movement : MonoBehaviour
 {
@@ -35,6 +36,12 @@ public class Blaster_Movement : MonoBehaviour
         }
 
         moveVelocity = 0;
+
+        //Scene reset
+        if (Input.GetKey(KeyCode.P))
+        {
+            SceneManager.LoadScene("Next_Level");
+        }
 
         //Left Right Movement
         if (Input.GetKey(KeyCode.A))
