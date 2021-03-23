@@ -26,14 +26,11 @@ public class Blaster_Movement : MonoBehaviour
                     rb.AddForce(transform.up * jump, ForceMode2D.Impulse);
                     counter++;
                 }
-                else if (counter >= 1)
-                {
-                    counter = 0;
-                }
             }
             else
             {
                 rb.AddForce(transform.up * jump, ForceMode2D.Impulse);
+                counter = 0;
             }
         }
 
@@ -52,10 +49,13 @@ public class Blaster_Movement : MonoBehaviour
         rb.velocity = new Vector2(moveVelocity, rb.velocity.y);
     }
     //Check if Grounded
-    void OnCollisionStay2D()
+    void OnCollisionEnter2D()
     {
         grounded = true;
     }
-    
+    void OnCollisionExit2D()
+    {
+        grounded = false;
+    }
 
 }
