@@ -8,6 +8,7 @@ public class Blaster_Movement : MonoBehaviour
     public float speed;
     public float jump;
     public Rigidbody2D rb;
+    private int counter = 0;
 
     float moveVelocity;
 
@@ -18,7 +19,19 @@ public class Blaster_Movement : MonoBehaviour
         //Jumping
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (grounded)
+            if (!grounded)
+            {
+                if (counter < 1)
+                {
+                    rb.AddForce(transform.up * jump, ForceMode2D.Impulse);
+                    counter++;
+                }
+                else if (counter >= 1)
+                {
+                    counter = 0;
+                }
+            }
+            else
             {
                 rb.AddForce(transform.up * jump, ForceMode2D.Impulse);
             }
@@ -39,13 +52,10 @@ public class Blaster_Movement : MonoBehaviour
         rb.velocity = new Vector2(moveVelocity, rb.velocity.y);
     }
     //Check if Grounded
-    /*void OnTriggerEnter2D()
+    void OnCollisionStay2D()
     {
         grounded = true;
     }
-    void OnTriggerExit2D()
-    {
-        grounded = false;
-    }*/
+    
 
 }
