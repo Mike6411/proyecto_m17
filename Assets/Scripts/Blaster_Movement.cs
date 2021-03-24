@@ -8,8 +8,11 @@ public class Blaster_Movement : MonoBehaviour
 
     public float speed;
     public float jump;
+    private float speedx;
     public Rigidbody2D rb;
     private int counter = 0;
+    public float maxX = 5;
+
 
     float moveVelocity;
 
@@ -34,8 +37,12 @@ public class Blaster_Movement : MonoBehaviour
                 counter = 0;
             }
         }
+    }
 
-        moveVelocity = 0;
+    void FixedUpdate()
+    {
+        //float movingSpeedR = rb.velocity.x + speed;
+        //float movingSpeedL = rb.velocity.x - speed;
 
         //Scene reset
         if (Input.GetKey(KeyCode.P))
@@ -44,18 +51,24 @@ public class Blaster_Movement : MonoBehaviour
         }
 
         //Left Right Movement
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
-            moveVelocity = -speed;
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            moveVelocity = speed;
+            if (rb.velocity.x > -maxX)
+            {
+                rb.AddForce(Vector2.left * speed, ForceMode2D.Force);
+            }
         }
 
-        //Cambiar el moveVelocity
 
-        rb.velocity = new Vector2(rb.velocity.x + moveVelocity, rb.velocity.y);
+        if (Input.GetKey(KeyCode.D))
+        {
+            if (rb.velocity.x < maxX)
+            {
+                rb.AddForce(Vector2.right * speed, ForceMode2D.Force);
+            }
+        }
+ 
+
     }
     //Check if Grounded
     void OnCollisionEnter2D()
