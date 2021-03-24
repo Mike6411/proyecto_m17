@@ -19,6 +19,7 @@ public class Test : MonoBehaviour
         }
     }
 
+    
     void AddExplosionForce(Rigidbody2D rb, float explosionForce, Vector2 explosionPosition, float upwardsModifier = 0.0F, ForceMode2D mode = ForceMode2D.Impulse)
     {
         Vector2 explosionDir = rb.position - explosionPosition;
@@ -48,5 +49,12 @@ public class Test : MonoBehaviour
         {
             AddExplosionForce(rb, power, transform.position);
         }
+    }
+
+    void OnDrawGizmos()
+    {
+        // Draw a yellow sphere at the transform's position
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawSphere(transform.position, 1);
     }
 }

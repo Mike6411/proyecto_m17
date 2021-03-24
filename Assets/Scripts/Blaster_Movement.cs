@@ -44,16 +44,18 @@ public class Blaster_Movement : MonoBehaviour
         }
 
         //Left Right Movement
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             moveVelocity = -speed;
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             moveVelocity = speed;
         }
 
-        rb.velocity = new Vector2(moveVelocity, rb.velocity.y);
+        //Cambiar el moveVelocity
+
+        rb.velocity = new Vector2(rb.velocity.x + moveVelocity, rb.velocity.y);
     }
     //Check if Grounded
     void OnCollisionEnter2D()
