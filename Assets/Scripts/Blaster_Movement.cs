@@ -12,11 +12,18 @@ public class Blaster_Movement : MonoBehaviour
     public Rigidbody2D rb;
     private int counter = 0;
     public float maxX = 5;
-
+    private Animator animator;
+    private int robotWalkParamID;
 
     float moveVelocity;
 
     bool grounded = true;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+        robotWalkParamID = Animator.StringToHash("robotWalk");
+    }
 
     void Update()
     {
@@ -37,6 +44,41 @@ public class Blaster_Movement : MonoBehaviour
                 counter = 0;
             }
         }
+       
+        if (Input.GetKey(KeyCode.A))
+        {
+            if (rb.velocity.x > -maxX)
+            {
+                rb.AddForce(Vector2.left * speed, ForceMode2D.Force);
+                bool isWalking = animator.GetBool(robotWalkParamID);
+                animator.SetBool(robotWalkParamID, true);
+            }
+                
+
+        }
+        else {
+            bool isWalking = animator.GetBool(robotWalkParamID);
+            animator.SetBool(robotWalkParamID, false);
+        }
+
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            if (rb.velocity.x < maxX)
+            {
+                rb.AddForce(Vector2.right * speed, ForceMode2D.Force);
+                bool isWalking = animator.GetBool(robotWalkParamID);
+                animator.SetBool(robotWalkParamID, true);
+            }
+
+        }
+        else {
+            bool isWalking = animator.GetBool(robotWalkParamID);
+            animator.SetBool(robotWalkParamID, false);
+        }
+
+
+
     }
 
     void FixedUpdate()
@@ -51,12 +93,15 @@ public class Blaster_Movement : MonoBehaviour
         }
 
         //Left Right Movement
-        if (Input.GetKey(KeyCode.A))
+      /*  if (Input.GetKey(KeyCode.A))
         {
             if (rb.velocity.x > -maxX)
             {
                 rb.AddForce(Vector2.left * speed, ForceMode2D.Force);
+                  bool isWalking = animator.GetBool(robotWalkParamID);
+                  animator.SetBool(robotWalkParamID, true);
             }
+          
         }
 
 
@@ -65,8 +110,11 @@ public class Blaster_Movement : MonoBehaviour
             if (rb.velocity.x < maxX)
             {
                 rb.AddForce(Vector2.right * speed, ForceMode2D.Force);
+                 bool isWalking = animator.GetBool(robotWalkParamID);
+                 animator.SetBool(robotWalkParamID, true);
             }
-        }
+           
+        }*/
  
 
     }
