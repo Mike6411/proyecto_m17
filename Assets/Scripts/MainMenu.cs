@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Game_Manager : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -17,10 +17,14 @@ public class Game_Manager : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void StartGame()
     {
-        if (collision.gameObject.name == "puerta32x32_0") {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void CloseGame()
+    {
+        Application.Quit();
+        Debug.Log("Salir");
     }
 }

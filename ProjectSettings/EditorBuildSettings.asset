@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Tile_Level.unity
     guid: fc726947026e24840bc4bd41959b75ad
   - enabled: 1
+    path: "Assets/Scenes/Main_Men\xFA.unity"
+    guid: 138338d52cad7394aa3f939cdc175da8
+  - enabled: 1
     path: Assets/Scenes/Next_Level.unity
     guid: fd74bdf5a933a234c9db7dd232ce332e
   - enabled: 1
