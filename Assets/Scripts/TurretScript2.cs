@@ -56,6 +56,7 @@ public class TurretScript2 : MonoBehaviour
     {
         GameObject BulletIns = Instantiate(bullet, Shootpoint.position, Quaternion.identity);
         BulletIns.GetComponent<Rigidbody2D>().AddForce(Direction * Force);
+        FindObjectOfType<AudioManager>().Play("RocketLauncher");
     }
     private void OnDrawGizmosSelected()
     {

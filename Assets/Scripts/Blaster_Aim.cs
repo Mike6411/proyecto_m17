@@ -17,7 +17,7 @@ public class Blaster_Aim : MonoBehaviour
     public SpriteRenderer sr;
     public enum Weapons { NONE, WPN1, WPN2, WPN3, WPN4 };
     public Weapons currentWeapon;
-
+   
     void Start()
     {
         currentWeapon = Weapons.NONE;
@@ -57,16 +57,19 @@ public class Blaster_Aim : MonoBehaviour
             {
                 GameObject newRocket = Instantiate(rocket, transform.position + transform.right, transform.rotation);
                 newRocket.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.right * rocketSpeed);
+                FindObjectOfType<AudioManager>().Play("RocketLauncher");
             }
             if (currentWeapon == Weapons.WPN2)
             {
                 GameObject newC4 = Instantiate(C4, transform.position + transform.right, transform.rotation);
                 newC4.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.right * C4Speed);
+                FindObjectOfType<AudioManager>().Play("C4");
             }
             if (currentWeapon == Weapons.WPN3)
             {
                 GameObject newGrenade = Instantiate(grenade, transform.position + transform.right, transform.rotation);
                 newGrenade.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.right * GrenadeSpeed);
+                 FindObjectOfType<AudioManager>().Play("GrenadeLauncher");
             }
             if (currentWeapon == Weapons.WPN4)
             {
@@ -97,4 +100,5 @@ public class Blaster_Aim : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(0, 0, rotationZ);
     }
+
 }
