@@ -9,9 +9,11 @@ public class Blaster_Aim : MonoBehaviour
     public GameObject rocket;
     public GameObject C4;
     public GameObject grenade;
+    public GameObject mine;
     public float rocketSpeed;
     public float C4Speed;
     public float GrenadeSpeed;
+    public float MineSpeed;
     public SpriteRenderer sr;
     public enum Weapons { NONE, WPN1, WPN2, WPN3, WPN4 };
     public Weapons currentWeapon;
@@ -65,6 +67,11 @@ public class Blaster_Aim : MonoBehaviour
             {
                 GameObject newGrenade = Instantiate(grenade, transform.position + transform.right, transform.rotation);
                 newGrenade.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.right * GrenadeSpeed);
+            }
+            if (currentWeapon == Weapons.WPN4)
+            {
+                GameObject newMine = Instantiate(mine, transform.position + transform.right, transform.rotation);
+                newMine.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.right * MineSpeed);
             }
         }
     }
