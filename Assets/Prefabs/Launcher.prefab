@@ -102,8 +102,10 @@ MonoBehaviour:
   rocket: {fileID: 4303139835540540816, guid: 322325b70f49ec14ab8e2b2e5fd5fca0, type: 3}
   C4: {fileID: 4280392781817308627, guid: 2f76c7864886ec74db0940404b7e6d6c, type: 3}
   grenade: {fileID: 3632877206339543749, guid: 2130eb3409689d0498543268a0dbe70b, type: 3}
+  mine: {fileID: 0}
   rocketSpeed: 1000
   C4Speed: 10
   GrenadeSpeed: 150
+  MineSpeed: 0
   sr: {fileID: 784135908520151431}
   currentWeapon: 0
