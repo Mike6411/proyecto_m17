@@ -32,7 +32,7 @@ public class Blaster_Movement : MonoBehaviour
         {
             if (!grounded)
             {
-                if (counter < 1)
+                if (counter < 0)
                 {
                     rb.AddForce(transform.up * jump, ForceMode2D.Impulse);
                     counter++;

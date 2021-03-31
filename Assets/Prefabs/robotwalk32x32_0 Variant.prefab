@@ -99,7 +99,7 @@ PrefabInstance:
     - target: {fileID: 1197770288947875695, guid: 7b708d553180dc44fa67145643e4027a,
         type: 3}
       propertyPath: m_Name
-      value: robotwalk32x32_0
+      value: robotwalk32x32_0 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5520093674230169555, guid: 7b708d553180dc44fa67145643e4027a,
         type: 3}
@@ -111,6 +111,11 @@ PrefabInstance:
       propertyPath: rb
       value: 
       objectReference: {fileID: 1644653142260189328}
+    - target: {fileID: 7320490442016890287, guid: 7b708d553180dc44fa67145643e4027a,
+        type: 3}
+      propertyPath: maxX
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7982661543821427696, guid: 7b708d553180dc44fa67145643e4027a,
         type: 3}
       propertyPath: m_LocalPosition.x
