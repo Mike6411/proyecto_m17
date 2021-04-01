@@ -45,7 +45,9 @@ public class Blaster_Movement : MonoBehaviour
                 counter = 0;
             }
         }
+
         bool Walk = false;
+        //Movement
         if (Input.GetKey(KeyCode.A))
         {
               Walk = true;
