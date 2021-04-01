@@ -499,6 +499,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.52
       objectReference: {fileID: 0}
+    - target: {fileID: 834942803976188908, guid: 0a29f2b815d368a4b92a3442500a1e8b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Door
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18cea179e2cab9540b56903511b5d505, type: 3}
 --- !u!1001 &516664879
@@ -763,7 +768,7 @@ Transform:
   m_LocalScale: {x: 1.0073329, y: 0.95200276, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &700111997
 PrefabInstance:
@@ -876,7 +881,7 @@ Transform:
   m_Children:
   - {fileID: 980672456}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &980672455
 GameObject:
@@ -3516,7 +3521,7 @@ PrefabInstance:
     - target: {fileID: 5212994822093442462, guid: bc6f60c5e26c39649ad7d4caf3748e29,
         type: 3}
       propertyPath: sounds.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5212994822093442462, guid: bc6f60c5e26c39649ad7d4caf3748e29,
         type: 3}
@@ -3552,6 +3557,26 @@ PrefabInstance:
         type: 3}
       propertyPath: sounds.Array.data[2].volume
       value: 0.097
+      objectReference: {fileID: 0}
+    - target: {fileID: 5212994822093442462, guid: bc6f60c5e26c39649ad7d4caf3748e29,
+        type: 3}
+      propertyPath: sounds.Array.data[5].name
+      value: OpenDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5212994822093442462, guid: bc6f60c5e26c39649ad7d4caf3748e29,
+        type: 3}
+      propertyPath: sounds.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 80f2af9bb6e15db44a33a09a179a9f8a, type: 3}
+    - target: {fileID: 5212994822093442462, guid: bc6f60c5e26c39649ad7d4caf3748e29,
+        type: 3}
+      propertyPath: sounds.Array.data[5].volume
+      value: 0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5212994822093442462, guid: bc6f60c5e26c39649ad7d4caf3748e29,
+        type: 3}
+      propertyPath: sounds.Array.data[5].pitch
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5212994822093442463, guid: bc6f60c5e26c39649ad7d4caf3748e29,
         type: 3}

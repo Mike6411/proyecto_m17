@@ -4,19 +4,9 @@ using UnityEngine;
 
 public class Pressure_plate : MonoBehaviour
 {
-    GameObject puerta;
-    //puclic Animator pressure_plate;
-    //public Animator door;
+   
+ public bool IsDoorOpened = false;
 
-    void OnTriggerEnter(Collider col)
-    {
-        //pressure_plate.SetBool ("ON", false);
-        //door.SetBool ("open", false);
-    }
 
-    void Update()
-    {
-        //pressure_plate.SetBool ("ON", true);
-        //door.SetBool ("open", true);
-    }
+ 
 }
