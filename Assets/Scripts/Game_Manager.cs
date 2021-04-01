@@ -5,7 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class Game_Manager : MonoBehaviour
 {
+    public static Game_Manager Instance { get; private set; }
+
     // Start is called before the first frame update
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this);
+        } else
+        {
+            Debug.Log("Warning: multiple " + this + " in scene!");
+        }
+        
+    }
+
     void Start()
     {
         

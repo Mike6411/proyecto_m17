@@ -14,6 +14,7 @@ public class Blaster_Movement : MonoBehaviour
     public float maxX = 5;
     private Animator animator;
     private int robotWalkParamID;
+    public SpriteRenderer sr;
 
     float moveVelocity;
 
@@ -44,7 +45,6 @@ public class Blaster_Movement : MonoBehaviour
                 counter = 0;
             }
         }
-
         bool Walk = false;
         if (Input.GetKey(KeyCode.A))
         {
@@ -52,21 +52,18 @@ public class Blaster_Movement : MonoBehaviour
             if (rb.velocity.x > -maxX)
             {
                 rb.AddForce(Vector2.left * speed, ForceMode2D.Force);
+                sr.flipX = true;
             }
- 
         }
-       
-
-
         if (Input.GetKey(KeyCode.D))
         {
              Walk = true;
             if (rb.velocity.x < maxX)
             {
                 rb.AddForce(Vector2.right * speed, ForceMode2D.Force);
+                sr.flipX = false;
             }
         }
-
         //Animator
         if (Walk)
         {
@@ -77,48 +74,15 @@ public class Blaster_Movement : MonoBehaviour
             Walk = animator.GetBool(robotWalkParamID);
             animator.SetBool(robotWalkParamID, false);
         }
-
-
-
     }
 
     void FixedUpdate()
     {
-        //float movingSpeedR = rb.velocity.x + speed;
-        //float movingSpeedL = rb.velocity.x - speed;
-
         //Scene reset
         if (Input.GetKey(KeyCode.P))
         {
             SceneManager.LoadScene("Next_Level");
         }
-
-        //Left Right Movement
-        /* if (Input.GetKey(KeyCode.A))
-          {
-              if (rb.velocity.x > -maxX)
-              {
-                  rb.AddForce(Vector2.left * speed, ForceMode2D.Force);
-                    bool isWalking = animator.GetBool(robotWalkParamID);
-                    animator.SetBool(robotWalkParamID, true);
-              }
-
-          }
-
-
-          if (Input.GetKey(KeyCode.D))
-          {
-              if (rb.velocity.x < maxX)
-              {
-                  rb.AddForce(Vector2.right * speed, ForceMode2D.Force);
-                   bool isWalking = animator.GetBool(robotWalkParamID);
-                   animator.SetBool(robotWalkParamID, true);
-        
-              }
-
-          }*/
-
-
     }
     //Check if Grounded
     void OnCollisionEnter2D()

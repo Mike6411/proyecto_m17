@@ -7,15 +7,60 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2073202930575132715}
     m_Modifications:
+    - target: {fileID: 784135908520151424, guid: 5b4f87a3c31438646b8922689a4e4ef2,
+        type: 3}
+      propertyPath: rl
+      value: 
+      objectReference: {fileID: 21300000, guid: 07451766134f6574299abe13a49d4742,
+        type: 3}
+    - target: {fileID: 784135908520151424, guid: 5b4f87a3c31438646b8922689a4e4ef2,
+        type: 3}
+      propertyPath: gl
+      value: 
+      objectReference: {fileID: 21300000, guid: 04fdebecb2bb8314b84bc62a2719e8ff,
+        type: 3}
+    - target: {fileID: 784135908520151424, guid: 5b4f87a3c31438646b8922689a4e4ef2,
+        type: 3}
+      propertyPath: c4l
+      value: 
+      objectReference: {fileID: 21300000, guid: 8ccd5459db14cee42bc1c21dd59d5cea,
+        type: 3}
+    - target: {fileID: 784135908520151424, guid: 5b4f87a3c31438646b8922689a4e4ef2,
+        type: 3}
+      propertyPath: ml
+      value: 
+      objectReference: {fileID: 21300000, guid: 89ff765d388059443a217323d4796060,
+        type: 3}
+    - target: {fileID: 784135908520151424, guid: 5b4f87a3c31438646b8922689a4e4ef2,
+        type: 3}
+      propertyPath: C4Speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 784135908520151424, guid: 5b4f87a3c31438646b8922689a4e4ef2,
+        type: 3}
+      propertyPath: MineSpeed
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 784135908520151424, guid: 5b4f87a3c31438646b8922689a4e4ef2,
+        type: 3}
+      propertyPath: mine
+      value: 
+      objectReference: {fileID: 4898921020335194180, guid: d349a3b5c7ccc484f9115b8efd40cdc1,
+        type: 3}
+    - target: {fileID: 784135908520151424, guid: 5b4f87a3c31438646b8922689a4e4ef2,
+        type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 7102799823977202868}
     - target: {fileID: 784135908520151425, guid: 5b4f87a3c31438646b8922689a4e4ef2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.053241145
+      value: -0.017
       objectReference: {fileID: 0}
     - target: {fileID: 784135908520151425, guid: 5b4f87a3c31438646b8922689a4e4ef2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.007899335
+      value: -0.036
       objectReference: {fileID: 0}
     - target: {fileID: 784135908520151425, guid: 5b4f87a3c31438646b8922689a4e4ef2,
         type: 3}
@@ -65,18 +110,29 @@ PrefabInstance:
     - target: {fileID: 784135908520151425, guid: 5b4f87a3c31438646b8922689a4e4ef2,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2773731
+      value: 1.08
       objectReference: {fileID: 0}
     - target: {fileID: 784135908520151425, guid: 5b4f87a3c31438646b8922689a4e4ef2,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.19119881
+      value: 0.76
       objectReference: {fileID: 0}
     - target: {fileID: 784135908520151426, guid: 5b4f87a3c31438646b8922689a4e4ef2,
         type: 3}
       propertyPath: m_Name
       value: Launcher
       objectReference: {fileID: 0}
+    - target: {fileID: 784135908520151431, guid: 5b4f87a3c31438646b8922689a4e4ef2,
+        type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 784135908520151431, guid: 5b4f87a3c31438646b8922689a4e4ef2,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 07451766134f6574299abe13a49d4742,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b4f87a3c31438646b8922689a4e4ef2, type: 3}
 --- !u!1001 &8218334251626466267
@@ -86,16 +142,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 193262370864515789, guid: 1306f1b0c9e2a8f469bb66211b7ee2d6,
-        type: 3}
-      propertyPath: m_Name
-      value: TurretRocket
-      objectReference: {fileID: 0}
-    - target: {fileID: 8228127586337109141, guid: 1306f1b0c9e2a8f469bb66211b7ee2d6,
-        type: 3}
-      propertyPath: Target
-      value: 
-      objectReference: {fileID: 2073202930575132715}
     - target: {fileID: 1197770288947875695, guid: 7b708d553180dc44fa67145643e4027a,
         type: 3}
       propertyPath: m_Name
@@ -116,6 +162,11 @@ PrefabInstance:
       propertyPath: maxX
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7320490442016890287, guid: 7b708d553180dc44fa67145643e4027a,
+        type: 3}
+      propertyPath: sr
+      value: 
+      objectReference: {fileID: 5291753233662961438}
     - target: {fileID: 7982661543821427696, guid: 7b708d553180dc44fa67145643e4027a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -171,11 +222,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 193262370864515789, guid: 1306f1b0c9e2a8f469bb66211b7ee2d6,
+        type: 3}
+      propertyPath: m_Name
+      value: TurretRocket
+      objectReference: {fileID: 0}
+    - target: {fileID: 8228127586337109141, guid: 1306f1b0c9e2a8f469bb66211b7ee2d6,
+        type: 3}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 2073202930575132715}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b708d553180dc44fa67145643e4027a, type: 3}
+--- !u!1 &7102799823977202868 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1197770288947875695, guid: 7b708d553180dc44fa67145643e4027a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8218334251626466267}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2073202930575132715 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7982661543821427696, guid: 7b708d553180dc44fa67145643e4027a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8218334251626466267}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &5291753233662961438 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4286713205874388165, guid: 7b708d553180dc44fa67145643e4027a,
     type: 3}
   m_PrefabInstance: {fileID: 8218334251626466267}
   m_PrefabAsset: {fileID: 0}

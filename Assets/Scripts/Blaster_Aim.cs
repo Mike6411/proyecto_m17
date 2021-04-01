@@ -17,7 +17,12 @@ public class Blaster_Aim : MonoBehaviour
     public SpriteRenderer sr;
     public enum Weapons { NONE, WPN1, WPN2, WPN3, WPN4 };
     public Weapons currentWeapon;
-   
+    public Sprite rl;
+    public Sprite c4l;
+    public Sprite gl;
+    public Sprite ml;
+    public Sprite empty;
+
     void Start()
     {
         currentWeapon = Weapons.NONE;
@@ -32,22 +37,27 @@ public class Blaster_Aim : MonoBehaviour
         if (Input.GetKey(KeyCode.Alpha1))
         {
             currentWeapon = Weapons.WPN1;
+            sr.sprite = rl;
         }
         if (Input.GetKey(KeyCode.Alpha2))
         {
             currentWeapon = Weapons.WPN2;
+            sr.sprite = c4l;
         }
         if (Input.GetKey(KeyCode.Alpha3))
         {
             currentWeapon = Weapons.WPN3;
+            sr.sprite = gl;
         }
         if (Input.GetKey(KeyCode.Alpha4))
         {
             currentWeapon = Weapons.WPN4;
+            sr.sprite = ml;
         }
         if (Input.GetKey(KeyCode.Alpha0))
         {
             currentWeapon = Weapons.NONE;
+            sr.sprite = empty;
         }
 
         //Weapon Use
