@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -5909039264925340478}
   - component: {fileID: 3886349176794711348}
   - component: {fileID: 8484470572768182388}
+  - component: {fileID: 6882911841973304251}
   m_Layer: 0
   m_Name: puerta32x32_0
   m_TagString: door
@@ -143,6 +144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e333f70b8811d41b79efc848c8dcc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PressurePlate: {fileID: 0}
+  Opened: 0
 --- !u!114 &8484470572768182388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,3 +158,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8ffac2e92fef12449b976cc31de84cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6882911841973304251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834942803976188908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27bef127ee9f9d544b6f682b0c463e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsDoorOpened: 0
