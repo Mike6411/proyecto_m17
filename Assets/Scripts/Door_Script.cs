@@ -7,18 +7,20 @@ using UnityEngine.SceneManagement;
 public class Door_Script : MonoBehaviour
 {
     public GameObject PressurePlate;
-   // private PressureplateScript Pressure_plate;
-    public bool Opened = false;
+    public bool Opened = true;
+
     void Start (){
-       // Pressure_plate = PressurePlate.GetComponent<Pressure_plate>();
+       
     }
+
     void OnTriggerStay2D(Collider2D collision)
     {
-      /*if (PressurePlate.IsDoorOpened == true){
-        if ( collision.gameObject.tag == "Player")
+        if (Opened == true)
         {
-            SceneManager.LoadScene("Final_Prototipo");
+            if ( collision.gameObject.tag == "Player")
+            {
+                Game_Manager.Instance.LoadNextScene();
+            }
         }
-        }*/
     }
 }

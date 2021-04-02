@@ -30,13 +30,9 @@ public class Pressure_plate : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E)) { 
         
                 bool isOpen = animator.GetBool(doorOpenParamID);
-                animator.SetBool(doorOpenParamID, true);
-        
+                animator.SetBool(doorOpenParamID, true);       
             }
-        
         }
-       
- 
     }
 
     void FixedUpdate()
@@ -49,7 +45,6 @@ public class Pressure_plate : MonoBehaviour
         if (collision.gameObject.tag == "Player") {
             click = true;
         }
-
     }
 
 

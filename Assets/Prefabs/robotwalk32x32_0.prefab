@@ -167,4 +167,5 @@ MonoBehaviour:
   speed: 5
   jump: 10
   rb: {fileID: 7268695604568064843}
-  maxX: 5
+  maxX: 3
+  sr: {fileID: 0}

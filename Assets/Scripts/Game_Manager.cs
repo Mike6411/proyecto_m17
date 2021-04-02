@@ -32,10 +32,8 @@ public class Game_Manager : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void LoadNextScene()
     {
-        if (collision.gameObject.name == "puerta32x32_0") {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

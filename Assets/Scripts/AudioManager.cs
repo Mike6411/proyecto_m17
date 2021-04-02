@@ -4,12 +4,22 @@ using System;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
-
+    public static AudioManager Instance { get; private set; }
 
     // Start is called before the first frame update
     void Awake()
     {
-        foreach(Sound s in sounds){
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else
+        {
+            Debug.Log("Warning: multiple " + this + " in scene!");
+        }
+
+        foreach (Sound s in sounds){
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
             s.source.volume = s.volume;
