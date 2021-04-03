@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Game_Manager : MonoBehaviour
 {
     public static Game_Manager Instance { get; private set; }
     public Scene currentScene;
+    public Text text;
     public float timer;
     private float EndTime;
     private bool finish = false;
@@ -34,14 +36,13 @@ public class Game_Manager : MonoBehaviour
 
     void Start()
     {
-        
+        text.text = "" + 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        float delta = Time.deltaTime * 1000;
-
+        float delta = Time.deltaTime * 1;
         if (finish == false)
         {
             timer += delta;
@@ -75,9 +76,12 @@ public class Game_Manager : MonoBehaviour
                     time6 = timer;
                 }
                 i++;
+                timer = 0;
                 finish = false;
             }
         }
+
+        text.text = "" + timer;
     }
 
     public void LoadNextScene()

@@ -7,6 +7,7 @@ TagManager:
   - door
   - botton
   - plate
+  - Timer
   layers:
   - Default
   - TransparentFX
