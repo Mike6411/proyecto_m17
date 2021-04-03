@@ -168,4 +168,4 @@ MonoBehaviour:
   jump: 10
   rb: {fileID: 7268695604568064843}
   maxX: 3
-  sr: {fileID: 0}
+  sr: {fileID: 4286713205874388165}
