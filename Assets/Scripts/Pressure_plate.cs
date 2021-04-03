@@ -4,30 +4,44 @@ using UnityEngine;
 
 public class Pressure_plate : MonoBehaviour
 {
-   
-    //poner aqui la animacion de la puerta y que cuando la placa sea presionada o tocadas llamar a la animacion de la puerta
-    //para hacer que se active la animacion mientras pongamos un if que colisione con todo ya estaria llamando a la animacion
+  
+  public GameObject door;
+  private Animator animator;
+    private int doorOpenParamID;
+    public Rigidbody2D rb;
+    
 
-   
-
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
         
+        rb = GetComponent<Rigidbody2D>();
+        animator = door.GetComponent<Animator>();
+        doorOpenParamID = Animator.StringToHash("doorOpen");
     }
 
-    private void Update()
+    
+    
+
+    void OnTriggerEnter2D(Collider2D col)
     {
-
-       
+     
+         bool isOpen = animator.GetBool(doorOpenParamID);
+                animator.SetBool(doorOpenParamID, true);
+                 FindObjectOfType<AudioManager>().Play("OpenDoor");
+                 
+                 
     }
-
-    void FixedUpdate()
+    void OnTriggerExit2D(Collider2D col)
     {
       
+         bool isOpen = animator.GetBool(doorOpenParamID);
+                animator.SetBool(doorOpenParamID, false);
+                 FindObjectOfType<AudioManager>().Play("OpenDoor");
+    
+                 
     }
 
-  
-
-
+ 
 
 }

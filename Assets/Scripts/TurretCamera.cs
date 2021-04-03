@@ -2,18 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurretScript2 : MonoBehaviour
+public class TurretCamera : MonoBehaviour
 {
-    public float Range;
+     public float Range;
     public Transform Target;
     bool Detected = false;
     Vector2 Direction;
     public GameObject Gun;
-    public GameObject bullet;
-    public float FireRate;
-    float nextTimeToFire = 0;
-    public Transform Shootpoint;
-    public float Force;
+   
+    
+    
     
     // Start is called before the first frame update
     void Start()
@@ -46,19 +44,10 @@ public class TurretScript2 : MonoBehaviour
         if (Detected)
         {
             Gun.transform.up = Direction;
-            if(Time.time > nextTimeToFire)
-            {
-                nextTimeToFire = Time.time + 1 / FireRate;
-                shoot();
-            }
+           
         }
     }
-    void shoot()
-    {
-        GameObject BulletIns = Instantiate(bullet, Shootpoint.position, Quaternion.identity);
-        BulletIns.GetComponent<Rigidbody2D>().AddForce(Direction * Force);
-        FindObjectOfType<AudioManager>().Play("RocketLauncher");
-    }
+    
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(transform.position, Range);
