@@ -25,7 +25,8 @@ public class Button : MonoBehaviour
     void Update()
     {
         //Button Interaction
-        if (click)
+        //esto deberia de funcionar cuando estas cerca del boton pero NO funciona
+       /* if (click)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -33,7 +34,17 @@ public class Button : MonoBehaviour
                 bool isOpen = animator.GetBool(doorOpenParamID);
                 animator.SetBool(doorOpenParamID, true);
             }
+        }*/
+
+        // de esta manera funciona en todo el mapa
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+
+            bool isOpen = animator.GetBool(doorOpenParamID);
+            animator.SetBool(doorOpenParamID, true);
         }
+
+
     }
 
     private void OnTriggerStay2D(Collider2D collision)
