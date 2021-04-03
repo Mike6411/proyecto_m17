@@ -33,6 +33,7 @@ public class Button : MonoBehaviour
 
                 bool isOpen = animator.GetBool(doorOpenParamID);
                 animator.SetBool(doorOpenParamID, true);
+                
             }
         }*/
 
