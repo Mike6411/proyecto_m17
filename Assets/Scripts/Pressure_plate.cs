@@ -32,7 +32,7 @@ public class Pressure_plate : MonoBehaviour
                  
                  
     }
-    void OnTriggerExit2D(Collider2D col)
+   void OnTriggerExit2D(Collider2D col)
     {
       
          bool isOpen = animator.GetBool(doorOpenParamID);
