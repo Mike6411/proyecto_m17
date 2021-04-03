@@ -507,7 +507,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Press \"2\" to equip C4 \nPress \"K\" to detonate it\n"
+  m_Text: 'Press "2" to equip C4.
+
+    Press "K" to detonate it.
+
+'
 --- !u!222 &428500270
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -782,7 +786,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: You can move objects with physics with the impulse of your explosions (Including
-    yourself)
+    yourself).
 --- !u!222 &1101886303
 CanvasRenderer:
   m_ObjectHideFlags: 0

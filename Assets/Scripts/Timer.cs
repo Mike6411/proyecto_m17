@@ -6,6 +6,7 @@ public class Timer : MonoBehaviour
 {
     
     public float timer;
+    public GameObject tiempotext;
     private float EndTime;
     private bool finish = false;
 
