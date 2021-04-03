@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    /*
+    
     public float timer;
     private float EndTime;
     private bool finish = false;
@@ -29,5 +29,5 @@ public class Timer : MonoBehaviour
             finish = true;
         }
     }
-    */
+    
 }

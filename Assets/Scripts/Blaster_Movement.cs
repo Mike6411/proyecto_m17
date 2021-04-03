@@ -83,7 +83,7 @@ public class Blaster_Movement : MonoBehaviour
         //Scene reset
         if (Input.GetKey(KeyCode.P))
         {
-            SceneManager.LoadScene("Next_Level");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
     //Check if Grounded
