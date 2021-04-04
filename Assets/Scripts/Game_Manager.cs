@@ -36,13 +36,15 @@ public class Game_Manager : MonoBehaviour
 
     void Start()
     {
-        text.text = "" + 0;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Timer Stuff
         float delta = Time.deltaTime * 1;
+        text.text = "Timer: " + timer;
         if (finish == false)
         {
             timer += delta;
@@ -81,7 +83,6 @@ public class Game_Manager : MonoBehaviour
             }
         }
 
-        text.text = "" + timer;
     }
 
     public void LoadNextScene()
