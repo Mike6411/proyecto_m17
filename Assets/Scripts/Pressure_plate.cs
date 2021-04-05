@@ -22,23 +22,32 @@ public class Pressure_plate : MonoBehaviour
 
     
     
-
-    void OnTriggerEnter2D(Collider2D col)
-    {
-     
+    void OnTriggerStay2D(Collider2D col){
+      if (col.gameObject.tag != "Projectile"){
          bool isOpen = animator.GetBool(doorOpenParamID);
                 animator.SetBool(doorOpenParamID, true);
                  FindObjectOfType<AudioManager>().Play("OpenDoor");
+                 }
+    }
+/*
+    void OnTriggerEnter2D(Collider2D col)
+    {
+     if (col.gameObject.tag != "Projectile"){
+         bool isOpen = animator.GetBool(doorOpenParamID);
+                animator.SetBool(doorOpenParamID, true);
+                 FindObjectOfType<AudioManager>().Play("OpenDoor");
+                 }
                  
                  
     }
+    */
    void OnTriggerExit2D(Collider2D col)
     {
-      
+      if (col.gameObject.tag != "Projectile"){
          bool isOpen = animator.GetBool(doorOpenParamID);
                 animator.SetBool(doorOpenParamID, false);
                  FindObjectOfType<AudioManager>().Play("OpenDoor");
-    
+      }
                  
     }
 

@@ -8,6 +8,7 @@ TagManager:
   - botton
   - plate
   - Timer
+  - Projectile
   layers:
   - Default
   - TransparentFX
