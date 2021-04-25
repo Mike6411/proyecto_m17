@@ -386,7 +386,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7189035473081050453, guid: 7b708d553180dc44fa67145643e4027a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7b708d553180dc44fa67145643e4027a, type: 3}
 --- !u!1 &930101656
 GameObject:
@@ -778,8 +779,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!483693784 &1251718854
 TilemapRenderer:

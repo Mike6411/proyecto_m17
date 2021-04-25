@@ -28,22 +28,12 @@ public class Blaster_Movement : MonoBehaviour
 
     void Update()
     {
+        float delta = Time.fixedDeltaTime;
+
         //Jumping
         if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (!grounded)
-            {
-                if (counter < 0)
-                {
-                    rb.AddForce(transform.up * jump, ForceMode2D.Impulse);
-                    counter++;
-                }
-            }
-            else
-            {
-                rb.AddForce(transform.up * jump, ForceMode2D.Impulse);
-                counter = 0;
-            }
+        {          
+          rb.AddForce(transform.up * jump, ForceMode2D.Impulse);
         }
 
         bool Walk = false;
