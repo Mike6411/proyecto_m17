@@ -2523,6 +2523,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Timer
       objectReference: {fileID: 0}
+    - target: {fileID: 2438012522181225417, guid: a75c002dfbf0c9d408564cebad1c0807,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 7233466449949395529, guid: a75c002dfbf0c9d408564cebad1c0807,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2581,22 +2586,22 @@ PrefabInstance:
     - target: {fileID: 7233466449949395529, guid: a75c002dfbf0c9d408564cebad1c0807,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 106.3
+      value: -333.21
       objectReference: {fileID: 0}
     - target: {fileID: 7233466449949395529, guid: a75c002dfbf0c9d408564cebad1c0807,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -91
+      value: 202.66
       objectReference: {fileID: 0}
     - target: {fileID: 7233466449949395529, guid: a75c002dfbf0c9d408564cebad1c0807,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 389.0819
+      value: 115.58386
       objectReference: {fileID: 0}
     - target: {fileID: 7233466449949395529, guid: a75c002dfbf0c9d408564cebad1c0807,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 95.07892
+      value: 34.68141
       objectReference: {fileID: 0}
     - target: {fileID: 7233466449949395529, guid: a75c002dfbf0c9d408564cebad1c0807,
         type: 3}
