@@ -18,9 +18,5 @@ public class TrapDoor_Script : MonoBehaviour
         {
             this.gameObject.SetActive(false);
         }
-        else
-        {
-            this.gameObject.SetActive(true);
-        }
     }
 }
