@@ -145,6 +145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8ffac2e92fef12449b976cc31de84cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 0
+  tiempotext: {fileID: 0}
 --- !u!114 &2538280384316021426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,6 +159,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27bef127ee9f9d544b6f682b0c463e78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  door: {fileID: 8586846457642783461}
+  rb: {fileID: 0}
 --- !u!114 &1399007407526172233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +173,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e333f70b8811d41b79efc848c8dcc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PressurePlate: {fileID: 0}
+  PressurePlate: {fileID: 6254539012164631444, guid: 3901b36917a22e94bb28145e42c8a4d4,
+    type: 3}
   Opened: 0
 --- !u!114 &-8122188451814396505
 MonoBehaviour:
@@ -183,4 +188,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 283513b5d6746bd4ca1b681fa9e0b2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  rb: {fileID: 1488002149937017484, guid: f5675cf8b3566e043a29ed32bdee1738, type: 3}

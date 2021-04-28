@@ -27,7 +27,7 @@ public class Pressure_plate : MonoBehaviour
          bool isOpen = animator.GetBool(doorOpenParamID);
                 animator.SetBool(doorOpenParamID, true);
                  FindObjectOfType<AudioManager>().Play("OpenDoor");
-                 }
+      }
     }
 /*
     void OnTriggerEnter2D(Collider2D col)
