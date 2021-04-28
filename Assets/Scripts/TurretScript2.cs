@@ -15,10 +15,16 @@ public class TurretScript2 : MonoBehaviour
     public Transform Shootpoint;
     public float Force;
     
+    private Animator animator;
+    private int torretdeathParamID;
+    bool TorretD;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
+        torretdeathParamID = Animator.StringToHash("Torret_destroy");
+        TorretD = false;
     }
     // Update is called once per frame
     void Update()
@@ -62,5 +68,14 @@ public class TurretScript2 : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(transform.position, Range);
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Projectile") {
+            TorretD = animator.GetBool(torretdeathParamID);
+            animator.SetBool(torretdeathParamID, true);
+           
+        }
     }
 }
