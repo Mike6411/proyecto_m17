@@ -9,10 +9,6 @@ public class Door_Script : MonoBehaviour
     public GameObject PressurePlate;
     public bool Opened = true;
 
-    void Start (){
-       
-    }
-
     void OnTriggerStay2D(Collider2D collision)
     {
         if (Opened == true)

@@ -18,7 +18,7 @@ public class Blaster_Movement : MonoBehaviour
 
     float moveVelocity;
 
-    bool grounded = true;
+    public bool grounded;
 
     private void Start()
     {
@@ -32,8 +32,10 @@ public class Blaster_Movement : MonoBehaviour
 
         //Jumping
         if (Input.GetKeyDown(KeyCode.Space))
-        {          
-          rb.AddForce(transform.up * jump, ForceMode2D.Impulse);
+        {
+            if (grounded) {
+                rb.AddForce(transform.up * jump, ForceMode2D.Impulse);
+            }
         }
 
         bool Walk = false;

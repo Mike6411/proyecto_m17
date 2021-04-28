@@ -14,39 +14,25 @@ public class Pressure_plate : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         rb = GetComponent<Rigidbody2D>();
         animator = door.GetComponent<Animator>();
         doorOpenParamID = Animator.StringToHash("doorOpen");
-    }
-
-    
+    } 
     
     void OnTriggerStay2D(Collider2D col){
       if (col.gameObject.tag != "Projectile"){
          bool isOpen = animator.GetBool(doorOpenParamID);
-                animator.SetBool(doorOpenParamID, true);
-                 FindObjectOfType<AudioManager>().Play("OpenDoor");
+         animator.SetBool(doorOpenParamID, true);
+         FindObjectOfType<AudioManager>().Play("OpenDoor");
       }
     }
-/*
-    void OnTriggerEnter2D(Collider2D col)
-    {
-     if (col.gameObject.tag != "Projectile"){
-         bool isOpen = animator.GetBool(doorOpenParamID);
-                animator.SetBool(doorOpenParamID, true);
-                 FindObjectOfType<AudioManager>().Play("OpenDoor");
-                 }
-                 
-                 
-    }
-    */
+
    void OnTriggerExit2D(Collider2D col)
     {
       if (col.gameObject.tag != "Projectile"){
          bool isOpen = animator.GetBool(doorOpenParamID);
-                animator.SetBool(doorOpenParamID, false);
-                 FindObjectOfType<AudioManager>().Play("OpenDoor");
+         animator.SetBool(doorOpenParamID, false);
+         FindObjectOfType<AudioManager>().Play("OpenDoor");
       }
                  
     }

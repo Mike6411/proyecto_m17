@@ -14,6 +14,7 @@ public class TurretScript2 : MonoBehaviour
     float nextTimeToFire = 0;
     public Transform Shootpoint;
     public float Force;
+    bool dead;
 
     public SpriteRenderer sr;
     private Animator animator;
@@ -27,6 +28,7 @@ public class TurretScript2 : MonoBehaviour
         torretdeathParamID = Animator.StringToHash("torreta_death");
         TorretD = false;
         sr = GetComponent<SpriteRenderer>();
+        dead = false;
     }
     // Update is called once per frame
     void Update()
@@ -51,13 +53,16 @@ public class TurretScript2 : MonoBehaviour
                 }
             }
         }
-        if (Detected)
+        if (!dead)
         {
-            Gun.transform.up = Direction;
-            if(Time.time > nextTimeToFire)
+            if (Detected)
             {
-                nextTimeToFire = Time.time + 1 / FireRate;
-                shoot();
+                Gun.transform.up = Direction;
+                if (Time.time > nextTimeToFire)
+                {
+                    nextTimeToFire = Time.time + 1 / FireRate;
+                    shoot();
+                }
             }
         }
     }
@@ -72,7 +77,7 @@ public class TurretScript2 : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, Range);
     }
 
-    void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Projectile")
         {
@@ -80,9 +85,6 @@ public class TurretScript2 : MonoBehaviour
             animator.SetBool(torretdeathParamID, true);
 
         }
-        else {
-            TorretD = animator.GetBool(torretdeathParamID);
-            animator.SetBool(torretdeathParamID, false);
-        }
+        dead = true;
     }
 }
