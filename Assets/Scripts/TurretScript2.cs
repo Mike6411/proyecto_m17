@@ -14,7 +14,8 @@ public class TurretScript2 : MonoBehaviour
     float nextTimeToFire = 0;
     public Transform Shootpoint;
     public float Force;
-    
+
+    public SpriteRenderer sr;
     private Animator animator;
     private int torretdeathParamID;
     bool TorretD;
@@ -23,8 +24,9 @@ public class TurretScript2 : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        torretdeathParamID = Animator.StringToHash("Torret_destroy");
+        torretdeathParamID = Animator.StringToHash("torreta_death");
         TorretD = false;
+        sr = GetComponent<SpriteRenderer>();
     }
     // Update is called once per frame
     void Update()
@@ -72,10 +74,15 @@ public class TurretScript2 : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Projectile") {
+        if (collision.gameObject.tag == "Projectile")
+        {
             TorretD = animator.GetBool(torretdeathParamID);
             animator.SetBool(torretdeathParamID, true);
-           
+
+        }
+        else {
+            TorretD = animator.GetBool(torretdeathParamID);
+            animator.SetBool(torretdeathParamID, false);
         }
     }
 }
