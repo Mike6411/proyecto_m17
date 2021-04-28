@@ -331,6 +331,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotwalk32x32_0
       objectReference: {fileID: 0}
+    - target: {fileID: 7268695604568064843, guid: 7b708d553180dc44fa67145643e4027a,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: e8650a4b13e5c7442b7d9f7f15352d30, type: 2}
     - target: {fileID: 7982661543821427696, guid: 7b708d553180dc44fa67145643e4027a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -385,6 +390,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982661543821427696, guid: 7b708d553180dc44fa67145643e4027a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.193018
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982661543821427696, guid: 7b708d553180dc44fa67145643e4027a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.797815
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7189035473081050453, guid: 7b708d553180dc44fa67145643e4027a, type: 3}
@@ -622,7 +637,7 @@ CompositeCollider2D:
   m_GameObject: {fileID: 1251718849}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 1906313411c29914a9b390d2f9d11c95, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -769,7 +784,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1251718849}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -777,7 +792,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 1906313411c29914a9b390d2f9d11c95, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 0
   m_CollisionDetection: 1

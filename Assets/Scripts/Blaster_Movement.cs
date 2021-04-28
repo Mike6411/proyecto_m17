@@ -40,16 +40,19 @@ public class Blaster_Movement : MonoBehaviour
         //Movement
         if (Input.GetKey(KeyCode.A))
         {
-              Walk = true;
+            Walk = true;
+
             if (rb.velocity.x > -maxX)
             {
                 rb.AddForce(Vector2.left * speed, ForceMode2D.Force);
                 sr.flipX = true;
             }
+            
         }
         if (Input.GetKey(KeyCode.D))
         {
-             Walk = true;
+            Walk = true;
+
             if (rb.velocity.x < maxX)
             {
                 rb.AddForce(Vector2.right * speed, ForceMode2D.Force);

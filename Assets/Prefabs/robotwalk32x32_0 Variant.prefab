@@ -142,6 +142,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 193262370864515789, guid: 1306f1b0c9e2a8f469bb66211b7ee2d6,
+        type: 3}
+      propertyPath: m_Name
+      value: TurretRocket
+      objectReference: {fileID: 0}
+    - target: {fileID: 8228127586337109141, guid: 1306f1b0c9e2a8f469bb66211b7ee2d6,
+        type: 3}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 2073202930575132715}
     - target: {fileID: 1197770288947875695, guid: 7b708d553180dc44fa67145643e4027a,
         type: 3}
       propertyPath: m_Name
@@ -152,6 +162,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 1dbc95834a455cf4fb36f0da6d185bf6, type: 2}
+    - target: {fileID: 7268695604568064843, guid: 7b708d553180dc44fa67145643e4027a,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 1906313411c29914a9b390d2f9d11c95, type: 2}
     - target: {fileID: 7320490442016890287, guid: 7b708d553180dc44fa67145643e4027a,
         type: 3}
       propertyPath: rb
@@ -222,16 +237,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 193262370864515789, guid: 1306f1b0c9e2a8f469bb66211b7ee2d6,
-        type: 3}
-      propertyPath: m_Name
-      value: TurretRocket
-      objectReference: {fileID: 0}
-    - target: {fileID: 8228127586337109141, guid: 1306f1b0c9e2a8f469bb66211b7ee2d6,
-        type: 3}
-      propertyPath: Target
-      value: 
-      objectReference: {fileID: 2073202930575132715}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b708d553180dc44fa67145643e4027a, type: 3}
 --- !u!1 &7102799823977202868 stripped
