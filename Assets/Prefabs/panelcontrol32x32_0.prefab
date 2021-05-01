@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 179826820754755091}
   - component: {fileID: 179826820754755090}
   - component: {fileID: 179826820754755089}
+  - component: {fileID: -559491923108472951}
   m_Layer: 0
   m_Name: panelcontrol32x32_0
   m_TagString: Untagged
@@ -123,3 +124,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puerta: {fileID: 0}
+--- !u!95 &-559491923108472951
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179826820754755101}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f8b207e97047064469b94820ff2a50a4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

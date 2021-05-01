@@ -83,6 +83,11 @@ public class Game_Manager : MonoBehaviour
             }
         }
 
+        //Menú de Opciones
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            SceneManager.LoadScene("Options_Menu");
+        }
+
     }
 
     public void LoadNextScene()
