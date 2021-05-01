@@ -72,6 +72,7 @@ public class TurretScript2 : MonoBehaviour
         BulletIns.GetComponent<Rigidbody2D>().AddForce(Direction * Force);
         FindObjectOfType<AudioManager>().Play("RocketLauncher");
     }
+    
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(transform.position, Range);
