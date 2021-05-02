@@ -8,9 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/Main_Men\xFA.unity"
     guid: 138338d52cad7394aa3f939cdc175da8
-  - enabled: 1
-    path: Assets/Scenes/Options_Menu.unity
-    guid: 1ddbd850d2827854091bd9dbf3fe86b5
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
@@ -50,6 +47,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Vegetal_5.unity
     guid: e4e0a736f9aa70b4da6221c6ddd57afb
+  - enabled: 1
+    path: Assets/Scenes/Options_Menu.unity
+    guid: 1ddbd850d2827854091bd9dbf3fe86b5
   - enabled: 0
     path: Assets/Scenes/Scene_8.unity
     guid: 362d7436877d4bc4aa9ddacfab54b89f

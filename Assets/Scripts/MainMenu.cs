@@ -8,6 +8,10 @@ public class MainMenu : MonoBehaviour
     public void ContinueGame() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+     public void ReturnToMainMenu() {
+        SceneManager.LoadScene("Main_Menú");
+    }
     
     public void StartGame()
     {
