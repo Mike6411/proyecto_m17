@@ -83,9 +83,16 @@ public class Game_Manager : MonoBehaviour
             }
         }
 
-        //Menú de Opciones
-        if (Input.GetKeyDown(KeyCode.Escape)) {
+        //Menú Pausa
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+
+            //Abrir menú pausa
             SceneManager.LoadScene("Options_Menu");
+        }
+        else { 
+            //Cerrar menú pausa
+
         }
 
     }
