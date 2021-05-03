@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 8496662487329840948, guid: 6545d483bd9a98f4bbf35fb155fe7b23,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -160,7 +160,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 8586846457642783461}
-  rb: {fileID: 0}
 --- !u!114 &1399007407526172233
 MonoBehaviour:
   m_ObjectHideFlags: 0
