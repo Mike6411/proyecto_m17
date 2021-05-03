@@ -10,6 +10,7 @@ public class Game_Manager : MonoBehaviour
     public Scene currentScene;
     public Text text;
     public float timer;
+    private int activeScene;
     private float EndTime;
     private bool finish = false;
     public float aux;
@@ -86,16 +87,21 @@ public class Game_Manager : MonoBehaviour
         //Menú Pausa
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-
+            //Guarda la escena en una variable
+            activeScene = SceneManager.GetActiveScene().buildIndex;
             //Abrir menú pausa
             SceneManager.LoadScene("Options_Menu");
         }
-        else { 
-            //Cerrar menú pausa
-
+        else if (Input.GetKeyDown(KeyCode.Escape)) {
+            //esto deberia sirvir para volver a la antigua escena
+            SceneManager.LoadScene(activeScene);
         }
+        
+      
 
     }
+
+  
 
     public void LoadNextScene()
     {
