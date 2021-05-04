@@ -8,7 +8,6 @@ public class Game_Manager : MonoBehaviour
 {
     public static Game_Manager Instance { get; private set; }
     public Scene currentScene;
-    public static Pause_Menu InstancePause { get; private set; }
     public Text text;
     public float timer;
     private int activeScene;
@@ -83,6 +82,21 @@ public class Game_Manager : MonoBehaviour
                 timer = 0;
                 finish = false;
             }
+        }
+
+        //Menú Pausa
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            //Guarda la escena en una variable
+            activeScene = SceneManager.GetActiveScene().buildIndex;
+           
+            //Abrir menú pausa
+            SceneManager.LoadScene("Options_Menu");
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            //esto deberia sirvir para volver a la antigua escena
+            SceneManager.LoadScene(activeScene);
         }
 
         //Pasar de nivel
