@@ -8,9 +8,7 @@ public class Wood_Script : MonoBehaviour
     {
         if ( collision.gameObject.tag == "Projectile")
         {
-            /*
-             Aqui pon la animación de romperse
-            */
+      
             Destroy(this.gameObject);
         }
     }
