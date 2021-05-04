@@ -19,7 +19,7 @@ public class ControlPanel : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if ( collision.gameObject.tag == "Projectile" && broken == false )
+        if ( collision.gameObject.tag == "Projectile" || collision.gameObject.tag == "granada32x32" && broken == false )
         {
             broken = true;
             //Cambiar sprite por uno roto
