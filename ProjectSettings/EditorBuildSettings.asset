@@ -48,11 +48,41 @@ EditorBuildSettings:
     path: Assets/Scenes/Vegetal_5.unity
     guid: e4e0a736f9aa70b4da6221c6ddd57afb
   - enabled: 1
+    path: Assets/Scenes/Fundicion_1.unity
+    guid: 3b3efe91f33ec4444b201c8ab3f4b39a
+  - enabled: 1
+    path: Assets/Scenes/Fundicion_2.unity
+    guid: d0498e2c2341a414bbb9539d2b09b2ba
+  - enabled: 1
+    path: Assets/Scenes/Fundicion_3.unity
+    guid: b327b98fdf7f9f347a4319062c5c4dff
+  - enabled: 1
+    path: Assets/Scenes/Fundicion_4.unity
+    guid: 9cefe6ad7f6da6a49a04ef5de4b85540
+  - enabled: 1
+    path: Assets/Scenes/Fundicion_5.unity
+    guid: 503f0a9bcfec7ad489750327774e2d31
+  - enabled: 1
+    path: Assets/Scenes/Tech_1.unity
+    guid: 436c0c0e311b5bd49ba5f4da2458d675
+  - enabled: 1
+    path: Assets/Scenes/Tech_2.unity
+    guid: 2be871dc3d4e30d4aaf57c7b16d2b9c8
+  - enabled: 1
+    path: Assets/Scenes/Tech_3.unity
+    guid: 9da399f9da4bf4948936705be201e1b7
+  - enabled: 1
+    path: Assets/Scenes/Tech_4.unity
+    guid: fede1d948b0390c46b62bfdcd0c61481
+  - enabled: 1
+    path: Assets/Scenes/Tech_5.unity
+    guid: bdc70c68e0ac1914d9b7ad24363d8a1b
+  - enabled: 1
     path: Assets/Scenes/Options_Menu.unity
     guid: 1ddbd850d2827854091bd9dbf3fe86b5
   - enabled: 0
-    path: Assets/Scenes/Scene_8.unity
-    guid: 362d7436877d4bc4aa9ddacfab54b89f
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
@@ -60,12 +90,12 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/Tile_Level.unity
-    guid: fc726947026e24840bc4bd41959b75ad
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Scenes/Next_Level.unity
     guid: fd74bdf5a933a234c9db7dd232ce332e
   - enabled: 0
-    path: Assets/Scenes/Final_Prototipo.unity
-    guid: 4bc2e13aaf4d07d4eb5efde96bedfb5d
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

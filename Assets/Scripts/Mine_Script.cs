@@ -43,3 +43,8 @@ public class Mine_Script : MonoBehaviour
         primed = true;
     }
 }
+
+
+
+
+    

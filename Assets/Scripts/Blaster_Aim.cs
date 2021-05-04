@@ -28,6 +28,7 @@ public class Blaster_Aim : MonoBehaviour
 
     void Start()
     {
+        elapsedTime = 1f;
         currentWeapon = Weapons.NONE;
     }
 
