@@ -40,7 +40,6 @@ public class Button : MonoBehaviour
         // de esta manera funciona en todo el mapa
         if (Input.GetKeyDown(KeyCode.E))
         {
-
             bool isOpen = animator.GetBool(doorOpenParamID);
             animator.SetBool(doorOpenParamID, true);
         }

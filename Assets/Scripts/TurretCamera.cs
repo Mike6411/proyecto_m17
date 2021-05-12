@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class TurretCamera : MonoBehaviour
 {
-     public float Range;
-    public Transform Target;
-    bool Detected = false;
-    Vector2 Direction;
-    public GameObject Gun;
+    public float range;
+    private Transform target;
+    bool detected = false;
+    Vector2 direction;
+    public GameObject gun;
    
     
     
@@ -16,40 +16,39 @@ public class TurretCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        target = GameObject.FindGameObjectsWithTag("Player")[0].transform;
     }
     // Update is called once per frame
     void Update()
     {
-        Vector2 targetPos = Target.position;
-        Direction = targetPos - (Vector2)transform.position;
-        RaycastHit2D rayInfo = Physics2D.Raycast(transform.position,Direction,Range);
+        Vector2 targetPos = target.position;
+        direction = targetPos - (Vector2)transform.position;
+        RaycastHit2D rayInfo = Physics2D.Raycast(transform.position,direction,range);
         if (rayInfo)
         {
             if(rayInfo.collider.gameObject.tag == "Player")
             {
-                if (Detected == false)
+                if (detected == false)
                 {
-                    Detected = true;
+                    detected = true;
                 }
             }
             else
             {
-                if (Detected == true)
+                if (detected == true)
                 {
-                    Detected = false;
+                    detected = false;
                 }
             }
         }
-        if (Detected)
+        if (detected)
         {
-            Gun.transform.up = Direction;
-           
+            gun.transform.up = direction;          
         }
     }
     
     private void OnDrawGizmosSelected()
     {
-        Gizmos.DrawWireSphere(transform.position, Range);
+        Gizmos.DrawWireSphere(transform.position, range);
     }
 }

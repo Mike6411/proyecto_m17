@@ -937,6 +937,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotwalk32x32_0
       objectReference: {fileID: 0}
+    - target: {fileID: 7320490442016890287, guid: 7b708d553180dc44fa67145643e4027a,
+        type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7320490442016890287, guid: 7b708d553180dc44fa67145643e4027a,
+        type: 3}
+      propertyPath: maxX
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7982661543821427696, guid: 7b708d553180dc44fa67145643e4027a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2331,7 +2341,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: 1906313411c29914a9b390d2f9d11c95, type: 2}
+  m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0

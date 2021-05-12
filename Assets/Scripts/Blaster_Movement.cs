@@ -46,7 +46,8 @@ public class Blaster_Movement : MonoBehaviour
 
             if (rb.velocity.x > -maxX)
             {
-                rb.AddForce(Vector2.left * speed, ForceMode2D.Force);
+                //rb.AddForce(Vector2.left * speed, ForceMode2D.Force);
+                rb.velocity += new Vector2(-speed, 0);
                 sr.flipX = true;
             }
             
@@ -57,7 +58,8 @@ public class Blaster_Movement : MonoBehaviour
 
             if (rb.velocity.x < maxX)
             {
-                rb.AddForce(Vector2.right * speed, ForceMode2D.Force);
+                //rb.AddForce(Vector2.right * speed, ForceMode2D.Force);
+                rb.velocity += new Vector2(speed,0);
                 sr.flipX = false;
             }
         }
@@ -82,7 +84,7 @@ public class Blaster_Movement : MonoBehaviour
         }
     }
     //Check if Grounded
-    void OnCollisionEnter2D()
+    void OnCollisionStay2D()
     {
         grounded = true;
     }
