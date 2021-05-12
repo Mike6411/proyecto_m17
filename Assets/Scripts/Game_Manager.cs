@@ -84,7 +84,7 @@ public class Game_Manager : MonoBehaviour
             }
         }
 
-        //Menú Pausa
+        /*//Menú Pausa
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             //Guarda la escena en una variable
@@ -97,7 +97,7 @@ public class Game_Manager : MonoBehaviour
         {
             //esto deberia sirvir para volver a la antigua escena
             SceneManager.LoadScene(activeScene);
-        }
+        }*/
 
         //Pasar de nivel
         if (Input.GetKeyDown(KeyCode.O)){
