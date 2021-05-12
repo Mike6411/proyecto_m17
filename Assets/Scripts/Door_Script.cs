@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class Door_Script : MonoBehaviour
 {
-    public GameObject PressurePlate;
     public bool Opened = true;
 
     void OnTriggerStay2D(Collider2D collision)

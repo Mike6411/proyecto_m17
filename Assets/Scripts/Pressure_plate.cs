@@ -5,19 +5,24 @@ using UnityEngine;
 public class Pressure_plate : MonoBehaviour
 {
   
-  public GameObject door;
-  private Animator animator;
-    private int doorOpenParamID;
+   public GameObject door;
+   private Animator animator;
+   private int doorOpenParamID;
    // public Rigidbody2D rb;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        
-    //    rb = GetComponent<Rigidbody2D>();
+        if(door == null) {
+            Debug.LogWarning("Puerta Sin Pressure Plate. Elimino Script Pressure Plate");
+            Destroy(this);
+        }
+        else {
         animator = door.GetComponent<Animator>();
-        doorOpenParamID = Animator.StringToHash("doorOpen");
+        doorOpenParamID = Animator.StringToHash("doorOpen"); 
+        }
+        
     } 
     
     void OnTriggerStay2D(Collider2D col){

@@ -8,6 +8,8 @@ public class Test : MonoBehaviour
     public float radius;
     public float timer;
     private float TTL = 200;
+
+    private AudioManager am;
     
 
    void Update()
@@ -20,8 +22,14 @@ public class Test : MonoBehaviour
         }
          
     }
-    void Start(){
-        FindObjectOfType<AudioManager>().Play("Explosion");
+    void Start()
+    {
+        am = FindObjectOfType<AudioManager>();
+        if(am != null)
+        {
+            am.Play("Explosion");
+        }
+        
     }
     
     void AddExplosionForce(Rigidbody2D rb, float explosionForce, Vector2 explosionPosition, float upwardsModifier = 0.0F, ForceMode2D mode = ForceMode2D.Impulse)

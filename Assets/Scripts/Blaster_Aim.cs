@@ -22,6 +22,7 @@ public class Blaster_Aim : MonoBehaviour
     public Sprite gl;
     public Sprite ml;
     public Sprite empty;
+    private AudioManager am;
 
     public float shotDelay = 0.5f;
     public float elapsedTime = 0;
@@ -30,6 +31,7 @@ public class Blaster_Aim : MonoBehaviour
     {
         elapsedTime = 1f;
         currentWeapon = Weapons.NONE;
+        am = FindObjectOfType<AudioManager>();
     }
 
     void Update()
@@ -75,21 +77,30 @@ public class Blaster_Aim : MonoBehaviour
                 elapsedTime = 0;
                 GameObject newRocket = Instantiate(rocket, transform.position + transform.right, transform.rotation);
                 newRocket.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.right * rocketSpeed);
-                FindObjectOfType<AudioManager>().Play("RocketLauncher");              
+                if (am != null)
+                {
+                    am.Play("RocketLauncher");
+                }
             }
             if (currentWeapon == Weapons.WPN2)
             {
                 elapsedTime = 0;
                 GameObject newC4 = Instantiate(C4, transform.position + transform.right, transform.rotation);
                 newC4.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.right * C4Speed);
-                FindObjectOfType<AudioManager>().Play("C4");
+                if (am != null)
+                {
+                    am.Play("C4");
+                }
             }
             if (currentWeapon == Weapons.WPN3)
             {
                 elapsedTime = 0;
                 GameObject newGrenade = Instantiate(grenade, transform.position + transform.right, transform.rotation);
                 newGrenade.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.right * GrenadeSpeed);
-                FindObjectOfType<AudioManager>().Play("GrenadeLauncher");
+                if (am != null)
+                {
+                    am.Play("GrenadeLauncher");
+                }
             }
             if (currentWeapon == Weapons.WPN4)
             {
