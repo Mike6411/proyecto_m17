@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
@@ -9,22 +10,18 @@ public class Timer : MonoBehaviour
     public GameObject tiempotext;
     private float EndTime;
     private bool finish = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-    // Update is called once per frame
+    private float delta;
+    public Text text;
     void Update()
     {
-       float delta = Time.deltaTime*1000;
+       delta = Time.deltaTime*1000;
 
        if (finish == false) {
+           text.text = "Timer: " + Mathf.Round(timer);
            timer += delta;
        }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player") {
             finish = true;

@@ -6,7 +6,29 @@ using UnityEngine.SceneManagement;
 
 public class Game_Manager : MonoBehaviour
 {
-    public static Game_Manager Instance { get; private set; }
+    private static Game_Manager instance = null;
+
+     // Game Instance Singleton
+     public static Game_Manager Instance
+     {
+         get
+         { 
+             if (instance == null)
+                {
+                 instance = FindObjectOfType<Game_Manager>();
+                }
+             if (instance == null)
+                {
+                 Debug.LogError("Singleton<" + typeof(Game_Manager) + "> instance has been not found.");
+                 GameObject go = new GameObject();
+                 go.AddComponent<Game_Manager>();
+                 instance = go.GetComponent < Game_Manager > ();
+                 
+                }
+             return instance; 
+         }
+     }
+
     public Scene currentScene;
     public Text text;
     public float timer;
@@ -24,20 +46,15 @@ public class Game_Manager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        if (Instance == null)
+        if (instance == null)
         {
-            Instance = this;
+            instance = this;
             DontDestroyOnLoad(this);
         } else
         {
             Debug.Log("Warning: multiple " + this + " in scene!");
         }
         
-    }
-
-    void Start()
-    {
-
     }
 
     // Update is called once per frame
