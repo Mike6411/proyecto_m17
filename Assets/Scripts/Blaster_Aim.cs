@@ -73,6 +73,8 @@ public class Blaster_Aim : MonoBehaviour
         //Weapon Use
         if (Input.GetKeyDown(KeyCode.Mouse0) && elapsedTime >= shotDelay)
         {
+            //todo: reproducir sonido de disparo
+
             if (currentWeapon == Weapons.WPN1)
             {
                 elapsedTime = 0;
