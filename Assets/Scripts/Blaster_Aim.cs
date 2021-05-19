@@ -32,6 +32,7 @@ public class Blaster_Aim : MonoBehaviour
         elapsedTime = 1f;
         currentWeapon = Weapons.NONE;
         am = FindObjectOfType<AudioManager>();
+        sr.sprite = empty;
     }
 
     void Update()
