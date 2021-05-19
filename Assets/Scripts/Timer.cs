@@ -17,7 +17,7 @@ public class Timer : MonoBehaviour
        delta = Time.deltaTime*1000;
 
        if (finish == false) {
-           text.text = "Timer: " + Mathf.Round(timer);
+           /*text.text = "Timer: " + Mathf.Round(timer);*/
            timer += delta;
        }
     }

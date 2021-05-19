@@ -6,7 +6,7 @@ public class Attack_Cone : MonoBehaviour
 {
     public New_Turret_Script turretAI;
 
-    public bool isLeft = false;
+    public bool isRight = false;
 
     void Awake()
     {
@@ -17,7 +17,7 @@ public class Attack_Cone : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            if (isLeft)
+            if (isRight)
             {
                 turretAI.Attack(false);
             }

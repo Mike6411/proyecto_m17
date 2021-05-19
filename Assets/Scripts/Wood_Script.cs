@@ -8,7 +8,6 @@ public class Wood_Script : MonoBehaviour
     {
         if ( collision.gameObject.tag == "Projectile")
         {
-      
             Destroy(this.gameObject);
         }
     }

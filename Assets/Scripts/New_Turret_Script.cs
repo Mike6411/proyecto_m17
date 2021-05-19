@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class New_Turret_Script : MonoBehaviour
 {
+    #region Codigo antiguo
+
     public float distance;
     public float wakeRange;
     public float shootInterval;
@@ -16,18 +18,14 @@ public class New_Turret_Script : MonoBehaviour
     public Transform shootPointLeft;
     public Transform shootPointRight;
 
+    public bool awoken = false;
     public bool awake = false;
     public bool lookingRight = false;
 
 
-     void Awake()
+    void Awake()
     {
         anim = gameObject.GetComponent<Animator>();
-    }
-
-     void Start()
-    {
-        
     }
 
     void Update()
@@ -37,7 +35,7 @@ public class New_Turret_Script : MonoBehaviour
 
         RangeCheck();
 
-        if(target.transform.position.x > transform.position.x)
+        if (target.transform.position.x > transform.position.x)
         {
             lookingRight = true;
         }
@@ -47,18 +45,28 @@ public class New_Turret_Script : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Projectile")
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
 
     void RangeCheck()
     {
-        distance = Vector3.Distance(transform.position, target.transform.position);
+        distance = Vector2.Distance(transform.position, target.transform.position);
 
-        if(distance < wakeRange)
+        if (distance < wakeRange)
         {
             awake = true;
+            awoken = true;
         }
-        if(distance > wakeRange)
+        if (distance > wakeRange)
         {
             awake = false;
+            awoken = false;
         }
     }
 
@@ -67,30 +75,35 @@ public class New_Turret_Script : MonoBehaviour
     {
         bulletTimer += Time.deltaTime;
 
-        if(bulletTimer >= shootInterval)
+        if (bulletTimer >= shootInterval)
         {
             Vector2 direction = target.transform.position - transform.position;
             direction.Normalize();
-
-            if (!attackingRight)
+            if (awoken)
             {
-                GameObject clone;
-                clone = Instantiate(bullet, shootPointLeft.transform.position, shootPointLeft.transform.rotation);
-                clone.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
+                //Derecha
+                if (direction.x > 0)
+                {
+                    GameObject clone;
+                    clone = Instantiate(bullet, shootPointRight.transform.position, Quaternion.Euler(0,0,0),null);
+                    clone.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
+                    bulletTimer = 0;
+                }
 
-                bulletTimer = 0;
+                //Izquierda
+                if (direction.x < 0)
+                {
+                    GameObject clone;
+                    clone = Instantiate(bullet, shootPointLeft.transform.position, Quaternion.Euler(0, 0, 180), null);
+                    clone.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
+                    bulletTimer = 0;
+                }
+
             }
-
-            if (attackingRight)
-            {
-                GameObject clone;
-                clone = Instantiate(bullet, shootPointRight.transform.position, shootPointRight.transform.rotation);
-                clone.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
-
-                bulletTimer = 0;
-            }
-
         }
     }
+    #endregion
+
+
 }
 
