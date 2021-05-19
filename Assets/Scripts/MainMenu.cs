@@ -6,19 +6,38 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public static bool GameIsPause = false;
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (GameIsPause)
+            {
 
-            bool isActive = pauseMenu.activeSelf;
-
-            pauseMenu.SetActive(!isActive);
+                ContinueGame();
+            }
+            else {
+                Pause();
+            
+            }
+        
         }
+       
     }
 
+    public void Pause()
+    {
+        bool isActive = pauseMenu.activeSelf;
+        pauseMenu.SetActive(!isActive);
+        Time.timeScale = 0f;
+        GameIsPause = true;
+    }
 
     public void ContinueGame() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        bool isActive = pauseMenu.activeSelf;
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPause = false;
     }
 
      public void ReturnToMainMenu() {
