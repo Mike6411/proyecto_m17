@@ -833,12 +833,18 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 411163708}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 411163710}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &411163710 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2300893852967614644, guid: a75c002dfbf0c9d408564cebad1c0807,
+    type: 3}
+  m_PrefabInstance: {fileID: 411163708}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &495809747 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2789027370837029420, guid: f48a64800af02114eba365e830e5208c,
@@ -2598,7 +2604,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 272338300}
     - target: {fileID: 3627281781718198471, guid: 31e130ac4f4041149a83586c418c99b9,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -2775,10 +2781,25 @@ PrefabInstance:
       propertyPath: text
       value: 
       objectReference: {fileID: 411163709}
+    - target: {fileID: 649132274389885309, guid: efbcc279cf805984c8719f55a57ae01c,
+        type: 3}
+      propertyPath: tiempotext
+      value: 
+      objectReference: {fileID: 411163710}
     - target: {fileID: 1399007407526172233, guid: efbcc279cf805984c8719f55a57ae01c,
         type: 3}
       propertyPath: Opened
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2893930150963278470, guid: efbcc279cf805984c8719f55a57ae01c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7806685137805444571, guid: efbcc279cf805984c8719f55a57ae01c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8586846457642783461, guid: efbcc279cf805984c8719f55a57ae01c,
         type: 3}

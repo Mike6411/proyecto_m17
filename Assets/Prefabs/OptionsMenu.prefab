@@ -1215,7 +1215,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4571461148310314047, guid: 58dffeffe790c434d8883ef83e55d93c,
+          type: 3}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:

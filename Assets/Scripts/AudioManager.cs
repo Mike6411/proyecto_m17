@@ -5,6 +5,7 @@ using System;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
+   
     public static AudioManager Instance { get; private set; }
 
     // Start is called before the first frame update
