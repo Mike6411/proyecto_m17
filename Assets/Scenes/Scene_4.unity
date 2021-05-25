@@ -443,6 +443,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 455569030}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &455569032 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2438012522181225417, guid: a75c002dfbf0c9d408564cebad1c0807,
+    type: 3}
+  m_PrefabInstance: {fileID: 455569030}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &723750597
 GameObject:
   m_ObjectHideFlags: 0
@@ -2535,6 +2547,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 649132274389885309, guid: efbcc279cf805984c8719f55a57ae01c,
+        type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 455569032}
     - target: {fileID: 1399007407526172233, guid: efbcc279cf805984c8719f55a57ae01c,
         type: 3}
       propertyPath: PressurePlate

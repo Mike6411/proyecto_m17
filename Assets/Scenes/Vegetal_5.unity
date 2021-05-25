@@ -1407,6 +1407,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a75c002dfbf0c9d408564cebad1c0807, type: 3}
+--- !u!114 &1225276368 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2438012522181225417, guid: a75c002dfbf0c9d408564cebad1c0807,
+    type: 3}
+  m_PrefabInstance: {fileID: 1225276367}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1225276369 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7233466449949395529, guid: a75c002dfbf0c9d408564cebad1c0807,
@@ -3775,6 +3787,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 649132274389885309, guid: efbcc279cf805984c8719f55a57ae01c,
+        type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 1225276368}
     - target: {fileID: 1399007407526172233, guid: efbcc279cf805984c8719f55a57ae01c,
         type: 3}
       propertyPath: Opened

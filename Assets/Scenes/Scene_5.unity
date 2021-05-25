@@ -359,6 +359,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 649132274389885309, guid: efbcc279cf805984c8719f55a57ae01c,
+        type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 129195698}
     - target: {fileID: 1399007407526172233, guid: efbcc279cf805984c8719f55a57ae01c,
         type: 3}
       propertyPath: Opened
@@ -758,6 +763,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 129195696}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &129195698 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2438012522181225417, guid: a75c002dfbf0c9d408564cebad1c0807,
+    type: 3}
+  m_PrefabInstance: {fileID: 129195696}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &154523078
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -982,6 +999,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 193262370864515784, guid: 1306f1b0c9e2a8f469bb66211b7ee2d6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054057585762420437, guid: 1306f1b0c9e2a8f469bb66211b7ee2d6,
+        type: 3}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8228127586337109141, guid: 1306f1b0c9e2a8f469bb66211b7ee2d6,
+        type: 3}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 1597299920}
     - target: {fileID: 5731741591393795121, guid: 0c644e46d45d7b04fad7f14e1154713a,
         type: 3}
       propertyPath: m_RootOrder
@@ -1042,21 +1074,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bouncy object (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 193262370864515784, guid: 1306f1b0c9e2a8f469bb66211b7ee2d6,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.98
-      objectReference: {fileID: 0}
-    - target: {fileID: 6054057585762420437, guid: 1306f1b0c9e2a8f469bb66211b7ee2d6,
-        type: 3}
-      propertyPath: Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8228127586337109141, guid: 1306f1b0c9e2a8f469bb66211b7ee2d6,
-        type: 3}
-      propertyPath: Target
-      value: 
-      objectReference: {fileID: 1597299920}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c644e46d45d7b04fad7f14e1154713a, type: 3}
 --- !u!1 &540516248 stripped
