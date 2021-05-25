@@ -101,6 +101,7 @@ public class New_Turret_Script : MonoBehaviour
 
             }
         }
+        bulletTimer = 0;
     }
     #endregion
 

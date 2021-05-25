@@ -9,6 +9,7 @@ TagManager:
   - plate
   - Timer
   - Projectile
+  - Explosion
   layers:
   - Default
   - TransparentFX

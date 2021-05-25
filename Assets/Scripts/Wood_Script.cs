@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Wood_Script : MonoBehaviour
 {
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if ( collision.gameObject.tag == "Projectile")
+        if (collision.gameObject.tag == "Explosion")
         {
             Destroy(this.gameObject);
         }
