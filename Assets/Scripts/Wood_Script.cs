@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class Wood_Script : MonoBehaviour
 {
+
+    public ParticleSystem yep;
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Explosion")
         {
+            ParticleSystem particle = Instantiate(yep, transform.position, transform.rotation);
+            particle.Play(); 
+            Destroy(particle);
             Destroy(this.gameObject);
+           
         }
     }
 }
