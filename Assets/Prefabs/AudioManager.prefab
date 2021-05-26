@@ -56,15 +56,20 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Theme
-    clip: {fileID: 8300000, guid: 1d5f6725c1aeafb41a154e3d28bc1104, type: 3}
-    volume: 0.231
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
   - name: GrenadeLauncher
     clip: {fileID: 8300000, guid: efa20e164d0804a4688dbb22b43a38aa, type: 3}
     volume: 0.347
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  music:
+  - name: Theme
+    clip: {fileID: 8300000, guid: 1d5f6725c1aeafb41a154e3d28bc1104, type: 3}
+    volume: 0.26
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  soundMixer: {fileID: -7599672964500595837, guid: 63e8aba3c1caf6647a0c45c327509d16,
+    type: 2}
+  musicMixer: {fileID: -8978400028131767496, guid: 63e8aba3c1caf6647a0c45c327509d16,
+    type: 2}

@@ -41,6 +41,7 @@ public class MainMenu : MonoBehaviour
     }
 
      public void ReturnToMainMenu() {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Main_Menú");
        
      }

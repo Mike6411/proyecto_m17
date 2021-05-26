@@ -302,7 +302,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotwalk32x32_0 Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1278249669, guid: fab6b75a622a8ac4087d2cdd9cd3bca8, type: 3}
+    - {fileID: 1278249670, guid: fab6b75a622a8ac4087d2cdd9cd3bca8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fab6b75a622a8ac4087d2cdd9cd3bca8, type: 3}
 --- !u!1001 &350425969
 PrefabInstance:

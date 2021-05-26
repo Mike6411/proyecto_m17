@@ -5,8 +5,10 @@ using System;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
-   
+    public Sound[] music;
     public static AudioManager Instance { get; private set; }
+    public AudioMixerGroup soundMixer;
+    public AudioMixerGroup musicMixer;
 
     // Start is called before the first frame update
     void Awake()
@@ -27,15 +29,29 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
+           
+            s.source.outputAudioMixerGroup = soundMixer;
             
-            //s.source.output = s.output;
             
-            
+        }
+
+
+        foreach (Sound s in music)
+        {
+            s.source = gameObject.AddComponent<AudioSource>();
+            s.source.clip = s.clip;
+            s.source.volume = s.volume;
+            s.source.pitch = s.pitch;
+            s.source.loop = s.loop;
+
+            s.source.outputAudioMixerGroup = musicMixer;
+
+
         }
     }
     
     void Start (){
-        Play("Theme");
+        PlayMusic("Theme");
     }
 
     public void Play (string name){
@@ -46,5 +62,16 @@ public class AudioManager : MonoBehaviour
         }
         s.source.Play();
     }
- 
+
+    public void PlayMusic(string name)
+    {
+        Sound s = Array.Find(music, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Music: " + name + " not found");
+            return;
+        }
+        s.source.Play();
+    }
+
 }
