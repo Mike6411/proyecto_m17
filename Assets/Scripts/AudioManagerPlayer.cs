@@ -8,8 +8,17 @@ public class AudioManagerPlayer : MonoBehaviour
     [Header("Sonidos de disparo")]
     [SerializeField]AudioClip[] audiosDisparo;
 
-    [Header("Explosion 1")]
-    [SerializeField] AudioClip audioExpl1;
+    [Header("Launcher Explosion")]
+    [SerializeField] AudioClip audioLauncher;
+
+    [Header("Granade Explosion")]
+    [SerializeField] AudioClip audioGranade;
+
+    [Header("C4 Explosion")]
+    [SerializeField] AudioClip audioC4;
+
+    [Header("Mine Explosion")]
+    [SerializeField] AudioClip audioMine;
 
     private void Awake()
     {
@@ -22,6 +31,6 @@ public class AudioManagerPlayer : MonoBehaviour
     }
     public void PlayExplosion1()
     {
-        audioSource.PlayOneShot(audioExpl1);
+        audioSource.PlayOneShot(audioLauncher);
     }
 }
