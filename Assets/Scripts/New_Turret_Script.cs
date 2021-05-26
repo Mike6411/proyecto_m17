@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class New_Turret_Script : MonoBehaviour
 {
-    #region Codigo antiguo
-
     public float distance;
     public float wakeRange;
     public float shootInterval;
@@ -101,10 +99,6 @@ public class New_Turret_Script : MonoBehaviour
 
             }
         }
-        bulletTimer = 0;
     }
-    #endregion
-
-
 }
 

@@ -398,12 +398,13 @@ MonoBehaviour:
   distance: 0
   wakeRange: 4
   shootInterval: 5
-  bulletSpeed: 2
+  bulletSpeed: 3
   bulletTimer: 0
   bullet: {fileID: 4303139835540540816, guid: 322325b70f49ec14ab8e2b2e5fd5fca0, type: 3}
   target: {fileID: 0}
   anim: {fileID: 1830625078790573772}
   shootPointLeft: {fileID: 1923238607}
   shootPointRight: {fileID: 27130679}
+  awoken: 0
   awake: 0
   lookingRight: 0
