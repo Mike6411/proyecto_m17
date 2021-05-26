@@ -210,6 +210,38 @@ PrefabInstance:
       propertyPath: audiosDisparo.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1278249669, guid: fab6b75a622a8ac4087d2cdd9cd3bca8, type: 3}
+      propertyPath: audioGranade
+      value: 
+      objectReference: {fileID: 8300000, guid: efa20e164d0804a4688dbb22b43a38aa, type: 3}
+    - target: {fileID: 1278249669, guid: fab6b75a622a8ac4087d2cdd9cd3bca8, type: 3}
+      propertyPath: audioLauncher
+      value: 
+      objectReference: {fileID: 8300000, guid: 410b78949e82bb741a998b0fff89bd1f, type: 3}
+    - target: {fileID: 1278249669, guid: fab6b75a622a8ac4087d2cdd9cd3bca8, type: 3}
+      propertyPath: audioC4
+      value: 
+      objectReference: {fileID: 8300000, guid: bcfcc27520c5107418c62d2b587c6cea, type: 3}
+    - target: {fileID: 1278249669, guid: fab6b75a622a8ac4087d2cdd9cd3bca8, type: 3}
+      propertyPath: audioMine
+      value: 
+      objectReference: {fileID: 8300000, guid: 1fc9cceeb7ec482408b600be536d2dcb, type: 3}
+    - target: {fileID: 1278249669, guid: fab6b75a622a8ac4087d2cdd9cd3bca8, type: 3}
+      propertyPath: audiosDisparo.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 410b78949e82bb741a998b0fff89bd1f, type: 3}
+    - target: {fileID: 1278249669, guid: fab6b75a622a8ac4087d2cdd9cd3bca8, type: 3}
+      propertyPath: audiosDisparo.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 410b78949e82bb741a998b0fff89bd1f, type: 3}
+    - target: {fileID: 1278249669, guid: fab6b75a622a8ac4087d2cdd9cd3bca8, type: 3}
+      propertyPath: audiosDisparo.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 410b78949e82bb741a998b0fff89bd1f, type: 3}
+    - target: {fileID: 1278249669, guid: fab6b75a622a8ac4087d2cdd9cd3bca8, type: 3}
+      propertyPath: audiosDisparo.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 410b78949e82bb741a998b0fff89bd1f, type: 3}
     - target: {fileID: 2073202930575132715, guid: fab6b75a622a8ac4087d2cdd9cd3bca8,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManagerPlayer : MonoBehaviour
 {
@@ -26,11 +27,21 @@ public class AudioManagerPlayer : MonoBehaviour
     }
     public void PlayAudioDisparo()
     {
-        int rand = Random.Range(0, audiosDisparo.Length);
-        audioSource.PlayOneShot(audiosDisparo[rand]);
-    }
-    public void PlayExplosion1()
-    {
+        //int rand = Random.Range(0, audiosDisparo.Length);
+      
         audioSource.PlayOneShot(audioLauncher);
+    }
+    public void PlayExplosionGrande()
+    {
+        audioSource.PlayOneShot(audioGranade);
+    }
+
+    public void PlayExplosionC4()
+    {
+        audioSource.PlayOneShot(audioC4);
+    }
+    public void PlayExplosionMine()
+    {
+        audioSource.PlayOneShot(audioMine);
     }
 }
