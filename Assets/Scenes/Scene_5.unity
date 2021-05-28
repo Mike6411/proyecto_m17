@@ -397,7 +397,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -267.9, y: -11.9}
+  m_AnchoredPosition: {x: -261, y: -11}
   m_SizeDelta: {x: 185.75291, y: 92.269714}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &382920305
@@ -3595,6 +3595,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8770471127757047758, guid: 601a73b143b47af4b9342ce2f133ec01,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2057605438}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 601a73b143b47af4b9342ce2f133ec01, type: 3}
 --- !u!224 &2042328010 stripped
