@@ -12,10 +12,7 @@ public class Wood_Script : MonoBehaviour
         if (collision.gameObject.tag == "Explosion")
         {
             ParticleSystem particle = Instantiate(yep, transform.position, transform.rotation);
-            particle.Play(); 
-            Destroy(particle);
             Destroy(this.gameObject);
-           
         }
     }
 }

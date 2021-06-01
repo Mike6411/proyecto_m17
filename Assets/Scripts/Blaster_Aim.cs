@@ -17,6 +17,10 @@ public class Blaster_Aim : MonoBehaviour
     public SpriteRenderer sr;
     public enum Weapons { NONE, WPN1, WPN2, WPN3, WPN4 };
     public Weapons currentWeapon;
+    public bool rb = true;
+    public bool c4b = true;
+    public bool glb = true;
+    public bool mlb = true;
     public Sprite rl;
     public Sprite c4l;
     public Sprite gl;
@@ -41,22 +45,22 @@ public class Blaster_Aim : MonoBehaviour
         RotationWeapon(Camera.main.ScreenToWorldPoint(Input.mousePosition));
 
         //Weapon Select
-        if (Input.GetKey(KeyCode.Alpha1))
+        if (Input.GetKey(KeyCode.Alpha1) && rb == true)
         {
             currentWeapon = Weapons.WPN1;
             sr.sprite = rl;
         }
-        if (Input.GetKey(KeyCode.Alpha2))
+        if (Input.GetKey(KeyCode.Alpha2) && c4b == true)
         {
             currentWeapon = Weapons.WPN2;
             sr.sprite = c4l;
         }
-        if (Input.GetKey(KeyCode.Alpha3))
+        if (Input.GetKey(KeyCode.Alpha3) && glb == true)
         {
             currentWeapon = Weapons.WPN3;
             sr.sprite = gl;
         }
-        if (Input.GetKey(KeyCode.Alpha4))
+        if (Input.GetKey(KeyCode.Alpha4) && mlb == true)
         {
             currentWeapon = Weapons.WPN4;
             sr.sprite = ml;
