@@ -400,7 +400,7 @@ MonoBehaviour:
   shootInterval: 5
   bulletSpeed: 8
   bulletTimer: 0
-  bullet: {fileID: 4303139835540540816, guid: 322325b70f49ec14ab8e2b2e5fd5fca0, type: 3}
+  bullet: {fileID: 8143774018800251619, guid: 65431ffe1d10b7a46969887b908bac19, type: 3}
   target: {fileID: 0}
   anim: {fileID: 1830625078790573772}
   shootPointLeft: {fileID: 1923238607}
