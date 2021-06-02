@@ -635,6 +635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starsAnimator: {fileID: 3292312056538981029}
+  scoreCanvas: {fileID: 4761617584019544418}
 --- !u!95 &3292312056538981029
 Animator:
   serializedVersion: 3
@@ -739,6 +740,7 @@ GameObject:
   - component: {fileID: 2100983996051594976}
   - component: {fileID: 4519878548707886380}
   - component: {fileID: 7448466946990890924}
+  - component: {fileID: 6301162580883960677}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -862,6 +864,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6301162580883960677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5795767277179836259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ffac2e92fef12449b976cc31de84cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
+  tiempotext: {fileID: 0}
+  text: {fileID: 0}
 --- !u!1 &5806852277728237159
 GameObject:
   m_ObjectHideFlags: 0
