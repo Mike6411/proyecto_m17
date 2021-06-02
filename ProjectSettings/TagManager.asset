@@ -10,6 +10,7 @@ TagManager:
   - Timer
   - Projectile
   - Explosion
+  - Score
   layers:
   - Default
   - TransparentFX
