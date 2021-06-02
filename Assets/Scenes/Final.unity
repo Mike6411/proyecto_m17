@@ -983,7 +983,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "You are pass all levels. \n\nWe hope you enjoyed the game. \n\nThanks
+  m_Text: "You have passed all the levels. \n\nWe hope you enjoyed the game. \n\nThanks
     for playing."
 --- !u!222 &1904273434
 CanvasRenderer:

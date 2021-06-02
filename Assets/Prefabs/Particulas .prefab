@@ -41,7 +41,7 @@ ParticleSystem:
   m_GameObject: {fileID: 2031549437071004653}
   serializedVersion: 6
   lengthInSec: 0.5
-  simulationSpeed: 5
+  simulationSpeed: 3
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -975,7 +975,7 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 1
-      scalar: 1
+      scalar: 0.2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -983,21 +983,21 @@ ParticleSystem:
         - serializedVersion: 3
           time: 0
           value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 0.79940796
-          value: 0
           inSlope: -2.7344978
           outSlope: -2.7344978
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.14825588
           outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.99127907
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
