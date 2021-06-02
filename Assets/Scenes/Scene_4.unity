@@ -3016,6 +3016,16 @@ PrefabInstance:
       propertyPath: Opened
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1399007407526172233, guid: efbcc279cf805984c8719f55a57ae01c,
+        type: 3}
+      propertyPath: twoStars
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399007407526172233, guid: efbcc279cf805984c8719f55a57ae01c,
+        type: 3}
+      propertyPath: threeStars
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2538280384316021426, guid: efbcc279cf805984c8719f55a57ae01c,
         type: 3}
       propertyPath: door

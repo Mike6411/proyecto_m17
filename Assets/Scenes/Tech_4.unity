@@ -11251,6 +11251,16 @@ PrefabInstance:
       propertyPath: Opened
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1399007407526172233, guid: efbcc279cf805984c8719f55a57ae01c,
+        type: 3}
+      propertyPath: twoStars
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399007407526172233, guid: efbcc279cf805984c8719f55a57ae01c,
+        type: 3}
+      propertyPath: threeStars
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2893930150963278470, guid: efbcc279cf805984c8719f55a57ae01c,
         type: 3}
       propertyPath: m_IsActive
