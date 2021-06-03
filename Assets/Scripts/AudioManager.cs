@@ -23,6 +23,15 @@ public class AudioManager : MonoBehaviour
             Debug.Log("Warning: multiple " + this + " in scene!");
         }
 
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("music");
+        if (objs.Length > 1)
+        {
+            Destroy(this.gameObject);
+        }
+        else { 
+            DontDestroyOnLoad(this.gameObject);
+        }
+       
         foreach (Sound s in sounds){
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;

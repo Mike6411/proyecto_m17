@@ -11,6 +11,7 @@ TagManager:
   - Projectile
   - Explosion
   - Score
+  - music
   layers:
   - Default
   - TransparentFX
