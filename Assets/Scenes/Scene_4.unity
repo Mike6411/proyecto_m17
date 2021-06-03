@@ -355,6 +355,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2149508315610115005, guid: 601a73b143b47af4b9342ce2f133ec01,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 285.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6369064577489963581, guid: 601a73b143b47af4b9342ce2f133ec01,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6369064577489963581, guid: 601a73b143b47af4b9342ce2f133ec01,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6369064577489963581, guid: 601a73b143b47af4b9342ce2f133ec01,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8770471127757047754, guid: 601a73b143b47af4b9342ce2f133ec01,
         type: 3}
       propertyPath: m_Name
@@ -3050,6 +3070,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202795737855786119, guid: efbcc279cf805984c8719f55a57ae01c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202795737855786119, guid: efbcc279cf805984c8719f55a57ae01c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4613732400538925731, guid: efbcc279cf805984c8719f55a57ae01c,
+        type: 3}
+      propertyPath: tiempotext
+      value: 
+      objectReference: {fileID: 786822496}
+    - target: {fileID: 4613732400538925731, guid: efbcc279cf805984c8719f55a57ae01c,
+        type: 3}
+      propertyPath: score1
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7806685137805444571, guid: efbcc279cf805984c8719f55a57ae01c,
         type: 3}

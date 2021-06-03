@@ -3,19 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
+
 
 public class ScoreCanvasManager : MonoBehaviour
 {
     [SerializeField] Animator starsAnimator;
-    public Text score;
-    public GameObject tiempotext;
-
-    private void Start()
-    {
-        tiempotext = GameObject.FindGameObjectWithTag("Score");
-        score = tiempotext.GetComponent<Text>();
-    }
-
+  
     public void EndLevel(int stars)
     {
         starsAnimator.SetInteger("Stars", stars);
